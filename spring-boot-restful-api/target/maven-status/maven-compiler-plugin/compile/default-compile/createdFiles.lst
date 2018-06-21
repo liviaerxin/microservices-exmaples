@@ -1,8 +1,9 @@
-com/example/microservices/restfulapi/user/User.class
 com/example/microservices/restfulapi/person/PersonRepository.class
+com/example/microservices/restfulapi/user/User.class
 com/example/microservices/restfulapi/Application.class
 com/example/microservices/restfulapi/greeting/GreetingController.class
 com/example/microservices/restfulapi/person/Person.class
+com/example/microservices/restfulapi/person/PersonController.class
 com/example/microservices/restfulapi/config/MongoConfiguration.class
 com/example/microservices/restfulapi/user/UserRepository.class
 com/example/microservices/restfulapi/user/UserController.class
