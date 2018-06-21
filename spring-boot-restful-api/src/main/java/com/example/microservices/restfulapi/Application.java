@@ -1,22 +1,16 @@
 package com.example.microservices.restfulapi;
 
-import java.util.Arrays;
+/*import java.util.Arrays;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-import com.example.microservices.restfulapi.person.Person;
-import com.example.microservices.restfulapi.person.PersonRepository;
 
 @SpringBootApplication
 public class Application {
-
-	@Autowired
-	private PersonRepository repository;
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -33,10 +27,34 @@ public class Application {
             for (String beanName : beanNames) {
                 System.out.println(beanName);
             }
-            //run();
+
         };
     }
 
+}*/
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+
+import com.example.microservices.restfulapi.person.Person;
+import com.example.microservices.restfulapi.person.PersonRepository;
+
+@SpringBootApplication
+@EnableMongoRepositories
+public class Application implements CommandLineRunner {
+
+	@Autowired
+	private PersonRepository repository;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+
+	@Override
 	public void run(String... args) throws Exception {
 
 		repository.deleteAll();
@@ -65,4 +83,5 @@ public class Application {
 		}
 
 	}
+
 }
