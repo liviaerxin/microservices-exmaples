@@ -7,5 +7,6 @@
 /Users/siyao/Documents/microservices-exmaples/spring-boot-restful-api/src/main/java/com/example/microservices/restfulapi/user/UserRepository.java
 /Users/siyao/Documents/microservices-exmaples/spring-boot-restful-api/src/main/java/com/example/microservices/restfulapi/user/UserService.java
 /Users/siyao/Documents/microservices-exmaples/spring-boot-restful-api/src/main/java/com/example/microservices/restfulapi/user/User.java
+/Users/siyao/Documents/microservices-exmaples/spring-boot-restful-api/src/main/java/com/example/microservices/restfulapi/config/RabbitConfiguration.java
 /Users/siyao/Documents/microservices-exmaples/spring-boot-restful-api/src/main/java/com/example/microservices/restfulapi/user/UserController.java
 /Users/siyao/Documents/microservices-exmaples/spring-boot-restful-api/src/main/java/com/example/microservices/restfulapi/person/PersonController.java

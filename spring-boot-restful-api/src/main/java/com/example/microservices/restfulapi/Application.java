@@ -2,6 +2,8 @@ package com.example.microservices.restfulapi;
 
 import java.util.Arrays;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +16,9 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableMongoRepositories
 public class Application {
 
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
+	
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
@@ -30,6 +35,8 @@ public class Application {
                 System.out.println(beanName);
             }
 
+            System.out.println("Inpsect the RabbitMQ connection");
+            rabbitTemplate.getConnectionFactory().createConnection();
         };
     }
 
