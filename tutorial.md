@@ -20,6 +20,16 @@ Implement each business transaction that spans multiple services as a `saga`. Ea
 `query join` is performed in higher application level rather than in database. For example, an aggregated service(or the API gateway) could retrieve the customer and his shopping orders by first retrieving the customer data from customer service and then querying the order service to acquire the customer's most recent orders.
 ### Command Query Responsibility Segregation (CQRS)
 
+# REST API
+## Spring
+[](https://blog.tratif.com/2017/11/23/effective-restful-search-api-in-spring)  [](http://www.baeldung.com/queries-in-spring-data-mongodb)  
+[](http://www.baeldung.com/queries-in-spring-data-mongodb)  
+[](https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html)  
+## REST API Design Best Practices
+[](https://blog.philipphauer.de/restful-api-design-best-practices/)   
+[](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)  
+
+
 
 # references
 [spring boot code structure](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-structuring-your-code.html)  
