@@ -1,0 +1,783 @@
+Premise,
+
+docker swarm mode
+
+dpms@dhtsys-dev86:~$ docker node ls
+ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
+vhb82tbo49n93l9n0jq0rj98t     dhtsys-dev85        Ready               Active              
+kdjc4c022fpzmx1got1g3h6nm *   dhtsys-dev86        Ready               Active              Leader
+op88d1bpvwgtkkydr6fgyf8ys     dpms-desktop        Ready               Active              
+
+dpms@dhtsys-dev86:~$ docker service ps dpms86_web
+ID                  NAME                IMAGE                  NODE                DESIRED STATE       CURRENT STATE          ERROR               PORTS
+1u89txeh6z63        dpms86_web.1        dpms/webserver:3.1.4   dpms-desktop        Running             Running 25 hours ago                       
+
+[Dots are disallowed in docker service names](https://github.com/docker/swarmkit/issues/2437)  
+
+dpms@dhtsys-dev86:~$ docker service inspect dpms86_web
+[
+    {
+        "ID": "ktogbz0fcb2b83lxoys2yxjpe",
+        "Version": {
+            "Index": 5402455
+        },
+        "CreatedAt": "2018-11-13T07:13:20.363350212Z",
+        "UpdatedAt": "2018-11-13T07:36:39.450355394Z",
+        "Spec": {
+            "Name": "dpms86_web",
+            "Labels": {
+                "com.docker.stack.image": "dpms/webserver:3.1.4",
+                "com.docker.stack.namespace": "dpms86"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "dpms/webserver:3.1.4",
+                    "Labels": {
+                        "com.docker.stack.namespace": "dpms86"
+                    },
+                    "Hostname": "{{.Service.Name}}.{{.Task.Slot}}",
+                    "Env": [
+                        "ACTIVEMQ_URL=tcp://activemq:61616",
+                        "DB_PASSWORD=dpms_write",
+                        "DB_URL=jdbc:mariadb://mariadb/DPMS",
+                        "DB_USER=dpms_write",
+                        "ROOT_URL=https://10.6.64.85:8443"
+                    ],
+                    "Privileges": {
+                        "CredentialSpec": null,
+                        "SELinuxContext": null
+                    },
+                    "Mounts": [
+                        {
+                            "Type": "bind",
+                            "Source": "/media/dpms-nas2/dpms86/shared",
+                            "Target": "/usr/local/data"
+                        },
+                        {
+                            "Type": "bind",
+                            "Source": "/media/dpms-nas2/dpms86/shared/config",
+                            "Target": "/usr/local/config",
+                            "ReadOnly": true
+                        },
+                        {
+                            "Type": "tmpfs",
+                            "Target": "/tmpfs"
+                        },
+                        {
+                            "Type": "volume",
+                            "Source": "log-{{.Task.Name}}",
+                            "Target": "/var/log",
+                            "VolumeOptions": {}
+                        }
+                    ],
+                    "StopGracePeriod": 10000000000,
+                    "DNSConfig": {}
+                },
+                "Resources": {},
+                "RestartPolicy": {
+                    "Condition": "any",
+                    "Delay": 5000000000,
+                    "MaxAttempts": 0
+                },
+                "Placement": {},
+                "Networks": [
+                    {
+                        "Target": "ortbv6qbpoq7xg1frhflq20hr",
+                        "Aliases": [
+                            "web"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0,
+                "Runtime": "container"
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 1
+                }
+            },
+            "UpdateConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "RollbackConfig": {
+                "Parallelism": 1,
+                "FailureAction": "pause",
+                "Monitor": 5000000000,
+                "MaxFailureRatio": 0,
+                "Order": "stop-first"
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 8080,
+                        "PublishMode": "ingress"
+                    },
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 443,
+                        "PublishedPort": 8443,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "PreviousSpec": {
+            "Name": "dpms86_web",
+            "Labels": {
+                "com.docker.stack.image": "dpms/webserver:3.1.4",
+                "com.docker.stack.namespace": "dpms86"
+            },
+            "TaskTemplate": {
+                "ContainerSpec": {
+                    "Image": "dpms/webserver:3.1.4",
+                    "Labels": {
+                        "com.docker.stack.namespace": "dpms86"
+                    },
+                    "Hostname": "{{.Service.Name}}.{{.Task.Slot}}",
+                    "Env": [
+                        "ACTIVEMQ_URL=tcp://activemq:61616",
+                        "DB_PASSWORD=dpms_write",
+                        "DB_URL=jdbc:mariadb://mariadb/DPMS",
+                        "DB_USER=dpms_write",
+                        "ROOT_URL=https://10.6.64.85:8443"
+                    ],
+                    "Privileges": {
+                        "CredentialSpec": null,
+                        "SELinuxContext": null
+                    },
+                    "Mounts": [
+                        {
+                            "Type": "bind",
+                            "Source": "/media/dpms-nas2/dpms86/shared",
+                            "Target": "/usr/local/data"
+                        },
+                        {
+                            "Type": "bind",
+                            "Source": "/media/dpms-nas2/dpms86/shared/config",
+                            "Target": "/usr/local/config",
+                            "ReadOnly": true
+                        },
+                        {
+                            "Type": "tmpfs",
+                            "Target": "/tmpfs"
+                        },
+                        {
+                            "Type": "volume",
+                            "Source": "log-{{.Task.Name}}",
+                            "Target": "/var/log",
+                            "VolumeOptions": {}
+                        }
+                    ]
+                },
+                "Resources": {},
+                "Placement": {},
+                "Networks": [
+                    {
+                        "Target": "ortbv6qbpoq7xg1frhflq20hr",
+                        "Aliases": [
+                            "web"
+                        ]
+                    }
+                ],
+                "ForceUpdate": 0,
+                "Runtime": "container"
+            },
+            "Mode": {
+                "Replicated": {
+                    "Replicas": 2
+                }
+            },
+            "EndpointSpec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 8080,
+                        "PublishMode": "ingress"
+                    },
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 443,
+                        "PublishedPort": 8443,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            }
+        },
+        "Endpoint": {
+            "Spec": {
+                "Mode": "vip",
+                "Ports": [
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 80,
+                        "PublishedPort": 8080,
+                        "PublishMode": "ingress"
+                    },
+                    {
+                        "Protocol": "tcp",
+                        "TargetPort": 443,
+                        "PublishedPort": 8443,
+                        "PublishMode": "ingress"
+                    }
+                ]
+            },
+            "Ports": [
+                {
+                    "Protocol": "tcp",
+                    "TargetPort": 80,
+                    "PublishedPort": 8080,
+                    "PublishMode": "ingress"
+                },
+                {
+                    "Protocol": "tcp",
+                    "TargetPort": 443,
+                    "PublishedPort": 8443,
+                    "PublishMode": "ingress"
+                }
+            ],
+            "VirtualIPs": [
+                {
+                    "NetworkID": "mxjg2m5bd43v09lcxgrrsred8",
+                    "Addr": "10.255.0.8/16"
+                },
+                {
+                    "NetworkID": "ortbv6qbpoq7xg1frhflq20hr",
+                    "Addr": "10.0.0.25/24"
+                }
+            ]
+        }
+    }
+]
+
+
+dpms@dhtsys-dev86:~$ docker network ls
+NETWORK ID          NAME                 DRIVER              SCOPE
+981f24fd8839        bridge               bridge              local
+fb434be25a1d        dicomswarm_default   bridge              local
+eec815f7f303        docker_gwbridge      bridge              local
+ortbv6qbpoq7        dpms86_default       overlay             swarm
+4d45879f8511        host                 host                local
+mxjg2m5bd43v        ingress              overlay             swarm
+d4b875cfac62        none                 null                local
+
+
+dpms@dhtsys-dev86:~$ docker network inspect dpms86_default
+[
+    {
+        "Name": "dpms86_default",
+        "Id": "ortbv6qbpoq7xg1frhflq20hr",
+        "Created": "2018-11-13T15:12:39.28887668+08:00",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.0.0.0/24",
+                    "Gateway": "10.0.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "0e934d47aad39a469b42a5f8ef61ab57e6abef8a5800e3d286198f82debf2f18": {
+                "Name": "dpms86_mariadb.1.kmp2jpwvdbhi55qdcvqjn15v1",
+                "EndpointID": "179668031d21b244bb6748ec68f035b6b33c0f322147cf28309d64b39d4a29de",
+                "MacAddress": "02:42:0a:00:00:15",
+                "IPv4Address": "10.0.0.21/24",
+                "IPv6Address": ""
+            },
+            "562c670f377e5e9190e4efcaf5b89411f87c433deea7a1e5e07ecca33245ccea": {
+                "Name": "dpms86_keyserver.1.8mvxxlllrcey08hxc1uegp2xd",
+                "EndpointID": "0cb9b3f7f9daa232fa5c03b954d455f1be5b037b53918363656b86e70a98444e",
+                "MacAddress": "02:42:0a:00:00:03",
+                "IPv4Address": "10.0.0.3/24",
+                "IPv6Address": ""
+            },
+            "c8c6c15f12190b56752b4949a80aad210aedb217c334140ce2b8714d2c617167": {
+                "Name": "dpms86_worker-webhook.1.v13bucltemr6rja1b6kufqwq3",
+                "EndpointID": "920e5f3af726a9885ddda37dbecf41c34340afbb92195b7dc24020e9db171405",
+                "MacAddress": "02:42:0a:00:00:13",
+                "IPv4Address": "10.0.0.19/24",
+                "IPv6Address": ""
+            },
+            "cbf1f392ccb011a9f009a0790f91b549cd72bec405c26e31fa84bb5fc3567eb7": {
+                "Name": "dpms86_worker-converter.1.oe4h5m7yleb6y1fnzw08n9t5g",
+                "EndpointID": "6c16a1d60a3f3276abe622cdee5dd21f5a88bb139c0bb1f2506106a220abbd1e",
+                "MacAddress": "02:42:0a:00:00:11",
+                "IPv4Address": "10.0.0.17/24",
+                "IPv6Address": ""
+            },
+            "ec9149a0c3dd3d2ce33b7808ba29ab239639ae00b70e8091a74b358c08c2efc3": {
+                "Name": "dpms86_ftp.1.0d8cligpu1k9c92bkb5ostanb",
+                "EndpointID": "09cf3fbca84c20a900bf020d4f71d66d6fbf6149aa3033bbb1d7ec6eaad68c2a",
+                "MacAddress": "02:42:0a:00:00:0d",
+                "IPv4Address": "10.0.0.13/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4097"
+        },
+        "Labels": {
+            "com.docker.stack.namespace": "dpms86"
+        },
+        "Peers": [
+            {
+                "Name": "dhtsys-dev86-b93ad29d7c16",
+                "IP": "10.6.64.86"
+            },
+            {
+                "Name": "dhtsys-dev85-72736f676f2e",
+                "IP": "10.6.64.85"
+            },
+            {
+                "Name": "dpms-desktop-51197945c947",
+                "IP": "10.6.64.89"
+            }
+        ]
+    }
+]
+
+dpms@dpms-desktop:~$ docker network inspect ingress 
+[
+    {
+        "Name": "ingress",
+        "Id": "mxjg2m5bd43v09lcxgrrsred8",
+        "Created": "2018-08-20T08:54:56.858200087+08:00",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.255.0.0/16",
+                    "Gateway": "10.255.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": true,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "b17aeb9e3d0c86c4b9938a1a043dd38a88ecf539bd788d98fe4abea0cde79c5a": {
+                "Name": "dpms86_web.1.1u89txeh6z63w6p2j2vki9q4h",
+                "EndpointID": "2e5e10baee0b63737e3eb5d6ea1d0e5aff023eedb6ea9dc0ed98f04a205ee8d7",
+                "MacAddress": "02:42:0a:ff:00:09",
+                "IPv4Address": "10.255.0.9/16",
+                "IPv6Address": ""
+            },
+            "ingress-sbox": {
+                "Name": "ingress-endpoint",
+                "EndpointID": "7ec6bce1d87223cd8b71673caefbb4296c082b9088edeafb59e59d57cdc8332b",
+                "MacAddress": "02:42:0a:ff:00:0e",
+                "IPv4Address": "10.255.0.14/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4096"
+        },
+        "Labels": {},
+        "Peers": [
+            {
+                "Name": "dhtsys-dev85-72736f676f2e",
+                "IP": "10.6.64.85"
+            },
+            {
+                "Name": "dpms-desktop-51197945c947",
+                "IP": "10.6.64.89"
+            },
+            {
+                "Name": "dhtsys-dev86-b93ad29d7c16",
+                "IP": "10.6.64.86"
+            }
+        ]
+    }
+]
+
+
+dpms@dhtsys-dev86:~$ docker network inspect ingress 
+[
+    {
+        "Name": "ingress",
+        "Id": "mxjg2m5bd43v09lcxgrrsred8",
+        "Created": "2018-03-31T07:44:26.798054395+08:00",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.255.0.0/16",
+                    "Gateway": "10.255.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": true,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "ec9149a0c3dd3d2ce33b7808ba29ab239639ae00b70e8091a74b358c08c2efc3": {
+                "Name": "dpms86_ftp.1.0d8cligpu1k9c92bkb5ostanb",
+                "EndpointID": "d1e1060eb4dbd2add5b9ef4330f194250ab1799a2c544bdf388a169def86636a",
+                "MacAddress": "02:42:0a:ff:00:07",
+                "IPv4Address": "10.255.0.7/16",
+                "IPv6Address": ""
+            },
+            "ingress-sbox": {
+                "Name": "ingress-endpoint",
+                "EndpointID": "2a012726ac7108012d82e001298ddd85ca20d18c789cc30e52066982789972db",
+                "MacAddress": "02:42:0a:ff:00:02",
+                "IPv4Address": "10.255.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4096"
+        },
+        "Labels": {},
+        "Peers": [
+            {
+                "Name": "dhtsys-dev86-b93ad29d7c16",
+                "IP": "10.6.64.86"
+            },
+            {
+                "Name": "dhtsys-dev85-72736f676f2e",
+                "IP": "10.6.64.85"
+            },
+            {
+                "Name": "dpms-desktop-51197945c947",
+                "IP": "10.6.64.89"
+            }
+        ]
+    }
+]
+
+
+dpms@dpms-desktop:~$ docker container inspect dpms86_web.1.1u89txeh6z63w6p2j2vki9q4h 
+[
+    {
+        "Id": "b17aeb9e3d0c86c4b9938a1a043dd38a88ecf539bd788d98fe4abea0cde79c5a",
+        "Created": "2018-11-13T07:13:23.771093935Z",
+        "Path": "/bin/sh",
+        "Args": [
+            "-c",
+            "/usr/bin/entrypoint.sh"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 29047,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-11-13T07:13:24.721241259Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:e001de2a20fb7d7a4b2b94249a5e74c65a81aaa3fe8d096cea2c882ff34eceb4",
+        "ResolvConfPath": "/var/lib/docker/containers/b17aeb9e3d0c86c4b9938a1a043dd38a88ecf539bd788d98fe4abea0cde79c5a/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/b17aeb9e3d0c86c4b9938a1a043dd38a88ecf539bd788d98fe4abea0cde79c5a/hostname",
+        "HostsPath": "/var/lib/docker/containers/b17aeb9e3d0c86c4b9938a1a043dd38a88ecf539bd788d98fe4abea0cde79c5a/hosts",
+        "LogPath": "/var/lib/docker/containers/b17aeb9e3d0c86c4b9938a1a043dd38a88ecf539bd788d98fe4abea0cde79c5a/b17aeb9e3d0c86c4b9938a1a043dd38a88ecf539bd788d98fe4abea0cde79c5a-json.log",
+        "Name": "/dpms86_web.1.1u89txeh6z63w6p2j2vki9q4h",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": [
+            "ad48e694d91ba6e642566a5289e81f260e29e984ce62c212af9b8e670a886c4d"
+        ],
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "nvidia",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/media/dpms-nas2/dpms86/shared",
+                    "Target": "/usr/local/data"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/media/dpms-nas2/dpms86/shared/config",
+                    "Target": "/usr/local/config",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "tmpfs",
+                    "Target": "/tmpfs"
+                },
+                {
+                    "Type": "volume",
+                    "Source": "log-dpms86_web.1.1u89txeh6z63w6p2j2vki9q4h",
+                    "Target": "/var/log",
+                    "VolumeOptions": {}
+                }
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/a53506dab346c29a8788fb7e2f11d29ef4c1e5f4bb1d00d4f27e93230ac1e647-init/diff:/var/lib/docker/overlay2/08492335872a2f9ad571eb0457408027a5944cc173c347bcd9415c7493045568/diff:/var/lib/docker/overlay2/7d5b8088873e54ea833eb747d67ddef1bdf6c55371e5a95b6c62fe3e92b7f648/diff:/var/lib/docker/overlay2/1ae9cadf2970cd8492ebe55a86f94d282a54a45789308448beb4224d7a3d7198/diff:/var/lib/docker/overlay2/5ab253dab8a31fcbb935419e922954262918fba125a48aea9d2471e2f0e26768/diff:/var/lib/docker/overlay2/ea3f49f8d78d7f9e9e5e5c091e8f09e08c1d59cbf4ff721fd7b19d2cfcabdeaf/diff:/var/lib/docker/overlay2/64c13ea7a15f6b986a657c046c8f231c0e694c187a33c031e3e03f7063cf6a76/diff:/var/lib/docker/overlay2/1ed16bfef53e66018e45b6443046220450094d55bfed88f7cbc95555ba2a4ab6/diff:/var/lib/docker/overlay2/75caa99a00a4057396481d805b5a447687eca141039bfaf2036a00fbe82a9a99/diff:/var/lib/docker/overlay2/f629e165c0eeee27532fa22802ac5a9284aa50f46e38e6e063e794876d232f19/diff:/var/lib/docker/overlay2/ca0a6bacd99a54ca5e891d1431c705ec9cb416cd9d19d7c4c8f9162866af1fee/diff:/var/lib/docker/overlay2/f97c455f961e7a4236d9d4d627406840c79b6c044a64f52176faa5c61000c8b6/diff:/var/lib/docker/overlay2/4f49159c73b638794b587be115bc882db8fb88c3f3f042dc9b2bdc41b4924d78/diff:/var/lib/docker/overlay2/fb4cfa0a8fa4d6ca77d5a7e5f05b791d04034c38322246f652fad8e486f961ba/diff:/var/lib/docker/overlay2/e3b84847fcaba65f231144f68be4ab10aafccb6dcc80eb1ffab83410b6b8da7d/diff:/var/lib/docker/overlay2/1ee9f25f95319b87762ba4fdf9535ddf882820c6db04de3d13c210e2fa6d7678/diff:/var/lib/docker/overlay2/78a70e19b3b96aa3ef7bcf3df82a9c304ba4539243569bb34c4ae63a387c5348/diff:/var/lib/docker/overlay2/9a8ec25c862ecfd8b190cff793d59fb3eff1a37a9c194a5dfb0e685e6bf38662/diff:/var/lib/docker/overlay2/4858c1f2d4a8fdd4f6e6a5a4553a44a3b4e48d351e9c6914bb9a3f0a82b2d7aa/diff:/var/lib/docker/overlay2/80615116b3ffad50ae8d2d997ca2ac2a75888091e8353fcc7426216a3a854be2/diff:/var/lib/docker/overlay2/d8b347de4806f504b22dbcbe410e737a0707c442b0c06ae6c7c3c72e551e8dc2/diff:/var/lib/docker/overlay2/b28d0f419e25a6b8274eca4e44d33ace34f293c48b44583031e702edc7a326a2/diff:/var/lib/docker/overlay2/57985efeb5c79ae359a7b62de0452b5fcb3573caede9a580f3f1e864ed1b85a4/diff:/var/lib/docker/overlay2/02f13bdf3956e23d8cf98e52c3db5807a44a7a8240a8a29802c22b173752020a/diff:/var/lib/docker/overlay2/9fbf3eaed485e0f55cfb0828c4c1925967d83f2698cbb226be3a97f267d8f40e/diff:/var/lib/docker/overlay2/68610c65f0e7a0d5c6d103065f38dc10222f70e880a075059d045ad33f6402c5/diff:/var/lib/docker/overlay2/491ca32d7c4bfd90a6547552fbcb6bba00eb79ddd68d32485121dffcffcb202c/diff:/var/lib/docker/overlay2/9131717d6f90070face316a04017d033705de2d9c3c1654d74b13753dd7e175f/diff:/var/lib/docker/overlay2/7aceb5a5ee93bc21c7f05eedd80254509ee0ab0fee2dfb6c78afdeafa12eeb8d/diff:/var/lib/docker/overlay2/b98cec176a7fa60fead904fa0dca118dd3d37dbebc287fa03e3f6c862f9012a1/diff:/var/lib/docker/overlay2/8406a18ca9b8c212841f30823d87bdcef25378c33216cb70127e454ce4be6dff/diff:/var/lib/docker/overlay2/dbc8bad4db41ca6ea4fb4de45680961b6a4cdcac6c940ed43e5d9c4e8856424c/diff:/var/lib/docker/overlay2/4f6a77289c50625ef4430b78307f7cef77b54e049acee371db743e278945f7a5/diff:/var/lib/docker/overlay2/02dcb7d372f534366ca238534a64b103981c978a645d506e1dab3517f13e70e6/diff:/var/lib/docker/overlay2/9a52ff7eecbc917a8017d0e91b298d4378dfed36fed87754b361d8e8012c6c8d/diff:/var/lib/docker/overlay2/9a5fbd40e614e1bc2451a6c17ebb24397eb49d89c07ca55aefdf08808b23ed1a/diff:/var/lib/docker/overlay2/8f94c3d2dabcd99666fea0d2545010440eb536569393b2356f4d49024de84c6d/diff:/var/lib/docker/overlay2/254e84d230e08447712ff52c8ed86f87b26677e6b89afb1b4da2f8b522ee5c0e/diff:/var/lib/docker/overlay2/5f31749bf9beb432476d52c0d5f48ed6a354f76b83d1c0bd6b12aee433e17583/diff:/var/lib/docker/overlay2/67db9a65f4422a0e7c5a14da0a43505d7208ab9acb2615570ffa14680687beb3/diff:/var/lib/docker/overlay2/fefdb80ab72bf7ed31a1a3771ee850ce266d87420be575ffe106b7524305e5dd/diff:/var/lib/docker/overlay2/299b821e173366049405f1aec62943d2783ed73168dfc2af8cc7a0c0d1b6f328/diff:/var/lib/docker/overlay2/cbeb7bcf9222068267d14f8da3a0254d9ddd831d16194bae88d2c84edc6a26ad/diff:/var/lib/docker/overlay2/6e20656927da71335c022a0da3ce3afd7be5c5e01e9f5d7fa6c5f23c627f909b/diff:/var/lib/docker/overlay2/8a880dc0c63f2f4cf6dc84ba0860cc28b3c36c5b21981574c6ea8131a73e0a77/diff:/var/lib/docker/overlay2/d1edfcb47ffadd6fed460d9ae13c34ee01f7500938b57d0d04528a0b92a074c7/diff:/var/lib/docker/overlay2/c1883d82dd2bf196a6e51c27308ed79eac7b76d6ae09cb46cdcc481529aea9ba/diff:/var/lib/docker/overlay2/2f769d138edba1f9d3a3c52991b93c349cd3446902239fb72b9537dd46e2bd4f/diff",
+                "MergedDir": "/var/lib/docker/overlay2/a53506dab346c29a8788fb7e2f11d29ef4c1e5f4bb1d00d4f27e93230ac1e647/merged",
+                "UpperDir": "/var/lib/docker/overlay2/a53506dab346c29a8788fb7e2f11d29ef4c1e5f4bb1d00d4f27e93230ac1e647/diff",
+                "WorkDir": "/var/lib/docker/overlay2/a53506dab346c29a8788fb7e2f11d29ef4c1e5f4bb1d00d4f27e93230ac1e647/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/media/dpms-nas2/dpms86/shared",
+                "Destination": "/usr/local/data",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/media/dpms-nas2/dpms86/shared/config",
+                "Destination": "/usr/local/config",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "tmpfs",
+                "Source": "",
+                "Destination": "/tmpfs",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "log-dpms86_web.1.1u89txeh6z63w6p2j2vki9q4h",
+                "Source": "/var/lib/docker/volumes/log-dpms86_web.1.1u89txeh6z63w6p2j2vki9q4h/_data",
+                "Destination": "/var/log",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "dpms86_web.1",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "443/tcp": {},
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "ACTIVEMQ_URL=tcp://activemq:61616",
+                "DB_PASSWORD=dpms_write",
+                "DB_URL=jdbc:mariadb://mariadb/DPMS",
+                "DB_USER=dpms_write",
+                "ROOT_URL=https://10.6.64.85:8443",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LC_ALL=en_US.UTF-8",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US.UTF-8",
+                "MODE=production",
+                "ARCHIVE_CRON=0 0/30 14-23 * * *",
+                "EVENT_SERVICE_HOST=127.0.0.1",
+                "AWS_ACCESS_KEY=",
+                "AWS_SECRET_KEY=",
+                "AWS_REGION="
+            ],
+            "Cmd": null,
+            "ArgsEscaped": true,
+            "Image": "dpms/webserver:3.1.4",
+            "Volumes": {
+                "/tmpfs": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/bin/sh",
+                "-c",
+                "/usr/bin/entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.stack.namespace": "dpms86",
+                "com.docker.swarm.node.id": "op88d1bpvwgtkkydr6fgyf8ys",
+                "com.docker.swarm.service.id": "ktogbz0fcb2b83lxoys2yxjpe",
+                "com.docker.swarm.service.name": "dpms86_web",
+                "com.docker.swarm.task": "",
+                "com.docker.swarm.task.id": "1u89txeh6z63w6p2j2vki9q4h",
+                "com.docker.swarm.task.name": "dpms86_web.1.1u89txeh6z63w6p2j2vki9q4h"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "b2f243bac5e68675beacdd6dd5dbe0812226eb3a1ff430c2c026ce5d0802f5a3",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "443/tcp": null,
+                "80/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/b2f243bac5e6",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "dpms86_default": {
+                    "IPAMConfig": {
+                        "IPv4Address": "10.0.0.26"
+                    },
+                    "Links": null,
+                    "Aliases": [
+                        "b17aeb9e3d0c"
+                    ],
+                    "NetworkID": "ortbv6qbpoq7xg1frhflq20hr",
+                    "EndpointID": "65a2f869b2de93031f0bddc55116480827d54d48302c143e9cd43f15784b449b",
+                    "Gateway": "",
+                    "IPAddress": "10.0.0.26",
+                    "IPPrefixLen": 24,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:0a:00:00:1a",
+                    "DriverOpts": null
+                },
+                "ingress": {
+                    "IPAMConfig": {
+                        "IPv4Address": "10.255.0.9"
+                    },
+                    "Links": null,
+                    "Aliases": [
+                        "b17aeb9e3d0c"
+                    ],
+                    "NetworkID": "mxjg2m5bd43v09lcxgrrsred8",
+                    "EndpointID": "2e5e10baee0b63737e3eb5d6ea1d0e5aff023eedb6ea9dc0ed98f04a205ee8d7",
+                    "Gateway": "",
+                    "IPAddress": "10.255.0.9",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:0a:ff:00:09",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+

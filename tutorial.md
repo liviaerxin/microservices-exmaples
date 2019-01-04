@@ -26,3 +26,76 @@ Implement each business transaction that spans multiple services as a `saga`. Ea
 [microservices](http://microservices.io/)  
 [microservices examples](https://github.com/cer/microservices-examples)  
 [](http://callistaenterprise.se/blogg/teknik/2015/05/20/blog-series-building-microservices/)  
+
+
+# Web Server
+[Web Server IO Performance Among NODE PHP JAVA GO](https://www.toptal.com/back-end/server-side-io-performance-node-php-java-go)  
+[Java Application Servers](https://stackify.com/tomcat-vs-jetty-vs-glassfish-vs-wildfly/)  
+
+# Authentication and Authorization
+1. Authentication and Authorization should be externalized from the business logic.
+2. Authentication and Authorization should be centrally managed.
+
+[Authentication and Authorization for RESTful APIs](https://dzone.com/articles/steps-to-building-authentication-and-authorization)  
+[API Security: Ways to Authenticate and Authorize](https://dzone.com/articles/api-security-ways-to-authenticate-and-authorize)  
+
+# LDAP
+[How To Install and Configure OpenLDAP and phpLDAPadmin on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-ubuntu-16-04)  
+
+# Store Files Such As Images In Web Application.
+- database
+- ile-system
+- third-party cloud service.
+
+[](https://stackoverflow.com/questions/348363/what-is-the-best-place-for-storing-uploaded-images-sql-database-or-disk-file-sy)  
+
+# Long-running Task/Process/Thread In Java
+## Thread Pool:  
+Use a thread pool, create a task and submit it to the thread pool.
+pros:
+- control how many concurrent threads run, and how many tasks can wait in the thread pool's queue of waiting tasks.
+cons:
+
+## Publish/Subscribe Message Queue: 
+
+[](https://news.ycombinator.com/item?id=17064730)  
+
+
+
+# Docker Insight
+In docker swarm networks, 
+- `ingress` overlay
+  `docker network inspect ingress`
+  In general the default address configuration is, 
+  ```
+        "IPAM": {
+          "Driver": "default",
+          "Options": null,
+          "Config": [
+              {
+                  "Subnet": "10.255.0.0/16",
+                  "Gateway": "10.255.0.1"
+              }
+          ]
+        },  
+  ```
+
+
+
+- `{DPMS_STACK_NAME}_default` overlay
+  The address configuration might be, 
+  ```
+        "IPAM": {
+          "Driver": "default",
+          "Options": null,
+          "Config": [
+              {
+                  "Subnet": "10.0.0.0/24",
+                  "Gateway": "10.0.0.1"
+              }
+          ]
+        },
+  ```
+
+When access from outside networks, the traffic will go through `ingress` network to reach the docker internal nginx service. Because of it, the real remote address recoginzed by nginx would be `10.255.X.X`.
+When access from docker swarm internal networks, the traffic will go through `{DPMS_STACK_NAME}_default` network to reach the docker internal nginx service. Because of it, the real remote address recoginzed by nginx would be `10.0.0.X`.

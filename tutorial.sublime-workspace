@@ -1,0 +1,961 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"format"
+			],
+			[
+				"exp",
+				"example"
+			],
+			[
+				"Rs",
+				"raise\tkeyword"
+			],
+			[
+				"labe",
+				"labelMeta"
+			],
+			[
+				"re",
+				"return\tkeyword"
+			],
+			[
+				"con",
+				"context"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"par",
+				"parentLabelmapId"
+			],
+			[
+				"ser",
+				"seriesId"
+			],
+			[
+				"info",
+				"information"
+			],
+			[
+				"model",
+				"modelId"
+			],
+			[
+				"archi",
+				"archive"
+			],
+			[
+				"ar",
+				"archived"
+			],
+			[
+				"3d",
+				"3dhistech-export"
+			],
+			[
+				"r",
+				"result"
+			],
+			[
+				"num",
+				"numRows"
+			],
+			[
+				"en",
+				"endRow"
+			],
+			[
+				"ou",
+				"outFolder"
+			],
+			[
+				"touch",
+				"touch_file"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"nu",
+				"numRows"
+			],
+			[
+				"st",
+				"stdout"
+			],
+			[
+				"RE",
+				"result"
+			],
+			[
+				"rE",
+				"result"
+			],
+			[
+				"com",
+				"commands"
+			],
+			[
+				"co",
+				"commands"
+			],
+			[
+				"comm",
+				"command"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"tile",
+				"tileSize"
+			],
+			[
+				"row",
+				"rowCount"
+			],
+			[
+				"start",
+				"startRow"
+			],
+			[
+				"3dhi",
+				"3dhistech"
+			],
+			[
+				"rq",
+				"require"
+			],
+			[
+				"access_",
+				"access_by_lua"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"mo",
+				"motic-export"
+			],
+			[
+				"create",
+				"createFolder"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"ge",
+				"generated"
+			],
+			[
+				"SC",
+				"schema"
+			],
+			[
+				"B",
+				"BadRequest"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
+				"a",
+				"analyticsId"
+			],
+			[
+				"ana",
+				"Analytics"
+			],
+			[
+				"analytics",
+				"AnalyticsResultJson"
+			],
+			[
+				"mode",
+				"modelId"
+			],
+			[
+				"al",
+				"algorithmId"
+			],
+			[
+				"Ana",
+				"AnalyticsResultJson"
+			],
+			[
+				"pe",
+				"PENDING"
+			],
+			[
+				"an",
+				"analytics"
+			],
+			[
+				"la",
+				"labelId"
+			],
+			[
+				"dfr",
+				"draft"
+			],
+			[
+				"in",
+				"int32"
+			],
+			[
+				"de",
+				"description"
+			],
+			[
+				"algoritm",
+				"algorithm"
+			],
+			[
+				"DE",
+				"DEFAULT"
+			],
+			[
+				"User",
+				"UserFov"
+			],
+			[
+				"slide",
+				"slideId"
+			],
+			[
+				"MODE",
+				"modelId"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"i",
+				"items"
+			],
+			[
+				"An",
+				"Analytics"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"sa",
+				"say"
+			],
+			[
+				"case",
+				"caseId"
+			],
+			[
+				"DES",
+				"description"
+			],
+			[
+				"cre",
+				"CURRENT_TIMESTAMP"
+			],
+			[
+				"docker",
+				"docker-entrypoint-initdb"
+			],
+			[
+				"p",
+				"public"
+			],
+			[
+				"si",
+				"slideId"
+			],
+			[
+				"des",
+				"description"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"D",
+				"Delete"
+			],
+			[
+				"IN",
+				"integer"
+			],
+			[
+				"N",
+				"NULL"
+			],
+			[
+				"upl",
+				"upload"
+			],
+			[
+				"uo",
+				"upload"
+			],
+			[
+				"up",
+				"upload"
+			],
+			[
+				"tim",
+				"timeStamp"
+			],
+			[
+				"ad",
+				"advertiserId"
+			],
+			[
+				"da",
+				"datetime"
+			],
+			[
+				"In",
+				"INDEX"
+			],
+			[
+				"id",
+				"idleDesign"
+			],
+			[
+				"te",
+				"templateDesign"
+			],
+			[
+				"De",
+				"design"
+			],
+			[
+				"Up",
+				"Update"
+			],
+			[
+				"pay",
+				"payment"
+			],
+			[
+				"int",
+				"integer"
+			],
+			[
+				"C",
+				"Coupon"
+			],
+			[
+				"no",
+				"NOT"
+			],
+			[
+				"bo",
+				"boolean"
+			],
+			[
+				"F",
+				"Found"
+			],
+			[
+				"staer",
+				"startDate"
+			],
+			[
+				"h",
+				"HKD"
+			],
+			[
+				"PA",
+				"PAYMENT"
+			],
+			[
+				"AD",
+				"advertiser"
+			],
+			[
+				"PAYEM",
+				"PENDING_PAYMENT"
+			],
+			[
+				"crea",
+				"created"
+			],
+			[
+				"ex",
+				"expired"
+			],
+			[
+				"pr",
+				"PRIMARY"
+			],
+			[
+				"def",
+				"DEFAULT"
+			],
+			[
+				"t",
+				"table"
+			],
+			[
+				"disp",
+				"display"
+			],
+			[
+				"shor",
+				"shortBeat"
+			],
+			[
+				"su",
+				"successfully"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"deplo",
+				"deployToken"
+			],
+			[
+				"e",
+				"enum"
+			],
+			[
+				"displ",
+				"displays"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"allo",
+				"allocation"
+			],
+			[
+				"time",
+				"timeslot"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"tot",
+				"total"
+			],
+			[
+				"conslo",
+				"console_log"
+			],
+			[
+				"desi",
+				"designId"
+			],
+			[
+				"console",
+				"console_log"
+			],
+			[
+				"rand",
+				"randomBudget"
+			],
+			[
+				"cons",
+				"console_log"
+			],
+			[
+				"Math_",
+				"Math_round\t( x: number ): number Math"
+			],
+			[
+				"Math_r",
+				"Math_random\t(): number Math"
+			],
+			[
+				"ra",
+				"random\t(): number Math"
+			],
+			[
+				"DEA",
+				"DEFAULT"
+			],
+			[
+				"O",
+				"Object"
+			],
+			[
+				"PE",
+				"PENDING_PAYMENT"
+			],
+			[
+				"LO",
+				"locationId"
+			],
+			[
+				"dimension",
+				"dimensionId"
+			],
+			[
+				"No",
+				"NOT"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"json",
+				"Set Syntax: JSON Key-Value"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown view",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown",
+				"MarkdownEditing: Switch List Bullet Type"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"prin",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ma",
+				"MarkdownEditing: New Reference"
+			],
+			[
+				"dock",
+				"Set Syntax: Dockerfile"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"yam",
+				"YAML Nav: Copy Symbol To Clipboard"
+			],
+			[
+				"ya",
+				"YAML Nav: Goto Symbol"
+			],
+			[
+				"rm",
+				"Package Control: Remove Package"
+			],
+			[
+				"con",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"instakl",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"snni",
+				"Snippet: Creative Commons Attribution-NoDerivs 4.0"
+			],
+			[
+				"pay",
+				"Snippet: PayPal Badge"
+			],
+			[
+				"rmppl",
+				"Terminal: Open in project folder"
+			],
+			[
+				"readme hel",
+				"MarkdownEditing: Find Next Heading (Same or higher level)"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"pre",
+				"Pretty JSON: Validate"
+			],
+			[
+				"pa",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"INST",
+				"Package Control: Install Package"
+			],
+			[
+				"new f",
+				"File: New File Relative to Current View"
+			],
+			[
+				"rea",
+				"File: Rename"
+			],
+			[
+				"user",
+				"Preferences: Terminal Settings – User"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"ss ngin",
+				"Set Syntax: nginx"
+			],
+			[
+				"ss java",
+				"Set Syntax: Java"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 614.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/Service.py",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/app/dicom-api-swagger3.0.yaml",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/RetrainAndInferWrapper.py",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/RetrainTask.py",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/InferTask.py",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/docker-compose-dpms92.yaml",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/astri-mri-swarm.yaml",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/docker-compose-debug.yaml",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/docker-compose-dpms89.yaml",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/app/permission.md",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/nginx/conf.d/default.conf",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/docker-compose.yaml",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/.gitignore",
+		"/home/frankchen/Documents/dicom/test/builder/README.md",
+		"/home/frankchen/Documents/dicom/test/builder/Builder.py",
+		"/home/frankchen/Documents/dicom/test/config.yml",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/build.sh",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/build.sh",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/astri-mri-swarm.yaml",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/app/build.sh",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/nginx/build.sh",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/algo/build.sh",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/nginx/conf.d/default.conf",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/asrt/mri-swarm.yaml",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/app/Dockerfile",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/keyserver/build.sh",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/docker-compose-debug.yaml",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/app/pom.xml",
+		"/home/frankchen/Documents/dicom/test/workspace/docker-build/docker-build-maven/Dockerfile",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/docker-compose.yaml",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/docker-compose-dpms92.yaml",
+		"/home/frankchen/Documents/dicom/test/workspace/iterative-training/docker-api-server/docker-compose-dpms89.yaml",
+		"/home/frankchen/Documents/dicom/test/workspace/docker-build/docker-build-maven/build.sh",
+		"/home/frankchen/Documents/microservices-exmaples/tutorial.md",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/nginx/bearer.lua",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/nginx/verified.lua",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/nginx/nginx.conf",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/keyserver/app/server.js",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/keyserver/Dockerfile",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/keyserver/entrypoint.sh",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/user.json",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/jwt_public_key.pem",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/nginx/conf.d/rewriteJWT.lua",
+		"/home/frankchen/.config/sublime-text-3/Packages/Pretty JSON/Pretty JSON.sublime-settings",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/jwt_private_key.pem",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/nginx/Dockerfile",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/nginx/Dockerfile.nginx",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms92/dpms-stack.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms86/dpms-stack.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms92/.env",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms19/dpms-stack.yml",
+		"/home/frankchen/.cache/.fr-EiLpAg/index.html",
+		"/home/frankchen/Documents/microservices-exmaples/nginx/tutorial.md",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/Dockerfile.tf",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/Dockerfile.cuda",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/Dockerfile.cpu",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/requirements.txt",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/TrainAndInferWrapper.py",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/README.md",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/TrainTask.py",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/retrain/model_training_db.json",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/run.sh",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/retrain/sample_model_training_db.json",
+		"/home/frankchen/Documents/dicom/docker-dicom-mr/algo/fake_data/fake_model/fake_model.h5",
+		"/home/frankchen/Documents/dicom/dicom-swarm/project.md",
+		"/home/frankchen/Documents/dicom/dicom-swarm/docker-swarm.yaml",
+		"/home/frankchen/Documents/dicom/dicom-swarm/app/dicom-api-swagger3.0.yaml",
+		"/media/msa-nas2/MSA Project Information/Web team/dicoogle_web_api.yaml",
+		"/home/frankchen/Documents/kubernetes/microservices.md",
+		"/media/msa-nas2/MSA Project Information/Web team/server.md",
+		"/home/frankchen/Documents/workspace/dicom/dicom-api-server/dicom-api-swagger3.0.yaml",
+		"/home/frankchen/Desktop/Weekly Report/MongoDB.md",
+		"/home/frankchen/Documents/microservices-exmaples/mongo-stack.yaml",
+		"/home/frankchen/Documents/workspace/dicom/mongo-stack.yaml",
+		"/home/frankchen/Documents/workspace/dicom/dicom-api-server/pom.xml",
+		"/home/frankchen/Documents/microservices-exmaples/spring-boot-restful-api/pom.xml",
+		"/home/frankchen/Documents/microservices-exmaples/spring-boot-restful-api/src/main/java/com/example/restfulspringboot/Application.java",
+		"/home/frankchen/Documents/workspace/MavenJava/src/test/java/hello/GreeterTest.java",
+		"/home/frankchen/Documents/workspace/MavenJava/pom.xml",
+		"/home/frankchen/Documents/workspace/MavenJava/src/main/java/hello/Greeter.java",
+		"/home/frankchen/Documents/workspace/MavenJava/src/main/java/hello/HelloWorld.java",
+		"/home/frankchen/Documents/workspace/SpringBoot/pom.xml",
+		"/home/frankchen/Documents/kubernetes/templates/traefic-deployment.yaml",
+		"/home/frankchen/Documents/kubernetes/templates/myapp-pod.yaml",
+		"/home/frankchen/Documents/kubernetes/iptables-rules-installed-by-kube-proxy.out",
+		"/home/frankchen/Documents/kubernetes/config-exercise/config-demo-2",
+		"/home/frankchen/Documents/kubernetes/config-exercise/config-aws",
+		"/home/frankchen/Documents/kubernetes/config-exercise/config-demo",
+		"/home/frankchen/Desktop/summoners_war/summoners_war_optimizer/data/bestiary-debate.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dmetrix-tool/benchmark.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool/benchmark.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/unictech-tool/unictech-tool.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool/motic-tool.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool/3dhistech-tool.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/unictech-tool/n.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/entrypoint.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/README.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-activemq-consumer/build.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-activemq-consumer/Dockerfile",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/build.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/3dhistech-tool.py",
+		"/home/frankchen/Documents/dpms-build/config.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool2/build.sh",
+		"/home/frankchen/Desktop/Weekly Report/Kernetes.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/tuning-nginx.MD",
+		"/home/frankchen/Desktop/Weekly Report/Dicoogle.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/Dockerfile",
+		"/home/frankchen/Documents/dicom/DicoogleDir/confs/server.xml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/api-doc/dpms.swagger.yaml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/api-doc/dpms.openapi3.yaml",
+		"/home/frankchen/Documents/dicom/DicoogleDir/Plugins/settings/file-storage.xml",
+		"/home/frankchen/Documents/dicom/DicoogleDir/Plugins/settings/luceneset.xml",
+		"/home/frankchen/Documents/dicom/dicoogle/pom.xml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/test.MD",
+		"/media/dpms-nas2/frank.test/3dhistech-tool-asyncio.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/3dhistech-tool2-large-tile.py",
+		"/home/frankchen/Documents/pythonws/3dhistech-tool3.py",
+		"/home/frankchen/Documents/pythonws/2b-async-asyncio-batch-file.py",
+		"/home/frankchen/Documents/pythonws/2a-async-asyncio-subprocess-await.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool2/motic-tool.py",
+		"/media/dpms-nas2/frank.test/3dhistech-tool3.py",
+		"/home/frankchen/Documents/pythonws/1-sync-async-execution-asyncio-await.py",
+		"/home/frankchen/Documents/pythonws/1b-cooperatively-scheduled-asyncio-await.py",
+		"/home/frankchen/Documents/pythonws/1c-determinism-sync-async-asyncio-await.py",
+		"/home/frankchen/Documents/pythonws/async-asyncio-subprocess-await.py",
+		"/home/frankchen/Desktop/guarantee.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/directives/cross-domain-insecure.conf",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/nginx.conf"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tutorial.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"data/bestiary-debate.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 356.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

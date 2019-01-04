@@ -25,3 +25,6 @@
 
 ## Spring RestTemplate
 [Rest Client Response Exception](https://stackoverflow.com/questions/15404605/spring-resttemplate-invoking-webservice-with-errors-and-analyze-status-code)  
+
+## Spring Event
+[Spring Event Listener](https://mydevgeek.com/spring-4-3-event-listener/)  
