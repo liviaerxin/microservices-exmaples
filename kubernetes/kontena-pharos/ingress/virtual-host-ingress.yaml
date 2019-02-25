@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: virtual-host-ingress
+spec:
+  rules:
+  - host: ec2-3-80-248-58.compute-1.amazonaws.com
+    http:
+      paths:
+      - backend:
+          serviceName: apple
+          servicePort: 80
+  - host: ec2-52-203-197-40.compute-1.amazonaws.com
+    http:
+      paths:
+      - backend:
+          serviceName: banana
+          servicePort: 80

@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cheeses
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.frontend.rule.type: PathPrefixStrip
+spec:
+  rules:
+  - host: ec2-34-205-255-79.compute-1.amazonaws.com
+    http:
+      paths:
+      - path: /stilton
+        backend:
+          serviceName: stilton
+          servicePort: 80
+      - path: /cheddar
+        backend:
+          serviceName: cheddar
+          servicePort: 80
+      - path: /wensleydale
+        backend:
+          serviceName: wensleydale
+          servicePort: 80

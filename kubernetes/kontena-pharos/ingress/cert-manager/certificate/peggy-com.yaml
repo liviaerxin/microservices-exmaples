@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: peggy-com
+spec:
+  secretName: peggy-com-tls
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+  commonName: peggy.gq
+  dnsNames:
+  - www.peggy.gq
+  - peggy.gq
+  acme:
+    config:
+    - http01:
+        ingressClass: nginx
+      domains:
+      - www.peggy.gq
+      - peggy.gq

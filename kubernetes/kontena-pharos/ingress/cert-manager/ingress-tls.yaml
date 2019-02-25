@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-tls
+  annotations:
+    kubernetes.io/ingress.class: "nginx"    
+    # certmanager.k8s.io/issuer: "letsencrypt-staging"
+    # certmanager.k8s.io/acme-challenge-type: http01
+spec:
+  tls:
+  - hosts:
+    - peggy.gq
+    #secretName: peggy-com-tls
+    secretName: peggy-com-prod-tls
+  rules:
+  - host: peggy.gq
+    http:
+      paths:
+      - path: /apple
+        backend:
+          serviceName: apple
+          servicePort: 80
+      - path: /banana
+        backend:
+          serviceName: banana
+          servicePort: 80

@@ -99,3 +99,4 @@ In docker swarm networks,
 
 When access from outside networks, the traffic will go through `ingress` network to reach the docker internal nginx service. Because of it, the real remote address recoginzed by nginx would be `10.255.X.X`.
 When access from docker swarm internal networks, the traffic will go through `{DPMS_STACK_NAME}_default` network to reach the docker internal nginx service. Because of it, the real remote address recoginzed by nginx would be `10.0.0.X`.
+

@@ -1,0 +1,21 @@
+hosts:
+  - address: "34.238.167.3"
+    private_address: "10.0.2.13"
+    user: ubuntu
+    ssh_key_path: ~/.ssh/dpms-aws-key.pem
+    role: master
+  - address: "3.80.248.58"
+    private_address: "10.0.2.38"
+    user: ubuntu
+    ssh_key_path: ~/.ssh/dpms-aws-key.pem
+    role: worker
+  - address: "52.203.197.40"
+    private_address: "10.0.2.101"
+    user: ubuntu
+    ssh_key_path: ~/.ssh/dpms-aws-key.pem
+    role: worker   
+network:
+  provider: weave
+addons:
+  ingress-nginx:
+     enabled: true

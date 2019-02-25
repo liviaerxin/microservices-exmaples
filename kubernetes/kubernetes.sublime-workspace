@@ -1,0 +1,1100 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"archi",
+				"archive"
+			],
+			[
+				"ar",
+				"archived"
+			],
+			[
+				"3d",
+				"3dhistech-export"
+			],
+			[
+				"r",
+				"result"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"num",
+				"numRows"
+			],
+			[
+				"en",
+				"endRow"
+			],
+			[
+				"ou",
+				"outFolder"
+			],
+			[
+				"touch",
+				"touch_file"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"nu",
+				"numRows"
+			],
+			[
+				"st",
+				"stdout"
+			],
+			[
+				"RE",
+				"result"
+			],
+			[
+				"rE",
+				"result"
+			],
+			[
+				"com",
+				"commands"
+			],
+			[
+				"co",
+				"commands"
+			],
+			[
+				"comm",
+				"command"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"tile",
+				"tileSize"
+			],
+			[
+				"row",
+				"rowCount"
+			],
+			[
+				"start",
+				"startRow"
+			],
+			[
+				"3dhi",
+				"3dhistech"
+			],
+			[
+				"rq",
+				"require"
+			],
+			[
+				"access_",
+				"access_by_lua"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"mo",
+				"motic-export"
+			],
+			[
+				"create",
+				"createFolder"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"ge",
+				"generated"
+			],
+			[
+				"SC",
+				"schema"
+			],
+			[
+				"B",
+				"BadRequest"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
+				"a",
+				"analyticsId"
+			],
+			[
+				"ana",
+				"Analytics"
+			],
+			[
+				"analytics",
+				"AnalyticsResultJson"
+			],
+			[
+				"mode",
+				"modelId"
+			],
+			[
+				"al",
+				"algorithmId"
+			],
+			[
+				"Ana",
+				"AnalyticsResultJson"
+			],
+			[
+				"pe",
+				"PENDING"
+			],
+			[
+				"an",
+				"analytics"
+			],
+			[
+				"la",
+				"labelId"
+			],
+			[
+				"dfr",
+				"draft"
+			],
+			[
+				"in",
+				"int32"
+			],
+			[
+				"de",
+				"description"
+			],
+			[
+				"algoritm",
+				"algorithm"
+			],
+			[
+				"DE",
+				"DEFAULT"
+			],
+			[
+				"User",
+				"UserFov"
+			],
+			[
+				"slide",
+				"slideId"
+			],
+			[
+				"MODE",
+				"modelId"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"i",
+				"items"
+			],
+			[
+				"An",
+				"Analytics"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"sa",
+				"say"
+			],
+			[
+				"case",
+				"caseId"
+			],
+			[
+				"DES",
+				"description"
+			],
+			[
+				"cre",
+				"CURRENT_TIMESTAMP"
+			],
+			[
+				"docker",
+				"docker-entrypoint-initdb"
+			],
+			[
+				"p",
+				"public"
+			],
+			[
+				"si",
+				"slideId"
+			],
+			[
+				"des",
+				"description"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"D",
+				"Delete"
+			],
+			[
+				"IN",
+				"integer"
+			],
+			[
+				"N",
+				"NULL"
+			],
+			[
+				"upl",
+				"upload"
+			],
+			[
+				"uo",
+				"upload"
+			],
+			[
+				"up",
+				"upload"
+			],
+			[
+				"tim",
+				"timeStamp"
+			],
+			[
+				"ad",
+				"advertiserId"
+			],
+			[
+				"da",
+				"datetime"
+			],
+			[
+				"In",
+				"INDEX"
+			],
+			[
+				"id",
+				"idleDesign"
+			],
+			[
+				"te",
+				"templateDesign"
+			],
+			[
+				"De",
+				"design"
+			],
+			[
+				"Up",
+				"Update"
+			],
+			[
+				"pay",
+				"payment"
+			],
+			[
+				"int",
+				"integer"
+			],
+			[
+				"C",
+				"Coupon"
+			],
+			[
+				"no",
+				"NOT"
+			],
+			[
+				"bo",
+				"boolean"
+			],
+			[
+				"F",
+				"Found"
+			],
+			[
+				"staer",
+				"startDate"
+			],
+			[
+				"h",
+				"HKD"
+			],
+			[
+				"PA",
+				"PAYMENT"
+			],
+			[
+				"AD",
+				"advertiser"
+			],
+			[
+				"PAYEM",
+				"PENDING_PAYMENT"
+			],
+			[
+				"crea",
+				"created"
+			],
+			[
+				"ex",
+				"expired"
+			],
+			[
+				"pr",
+				"PRIMARY"
+			],
+			[
+				"def",
+				"DEFAULT"
+			],
+			[
+				"t",
+				"table"
+			],
+			[
+				"disp",
+				"display"
+			],
+			[
+				"shor",
+				"shortBeat"
+			],
+			[
+				"su",
+				"successfully"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"deplo",
+				"deployToken"
+			],
+			[
+				"e",
+				"enum"
+			],
+			[
+				"displ",
+				"displays"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"allo",
+				"allocation"
+			],
+			[
+				"time",
+				"timeslot"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"tot",
+				"total"
+			],
+			[
+				"conslo",
+				"console_log"
+			],
+			[
+				"desi",
+				"designId"
+			],
+			[
+				"console",
+				"console_log"
+			],
+			[
+				"rand",
+				"randomBudget"
+			],
+			[
+				"cons",
+				"console_log"
+			],
+			[
+				"Math_",
+				"Math_round\t( x: number ): number Math"
+			],
+			[
+				"Math_r",
+				"Math_random\t(): number Math"
+			],
+			[
+				"ra",
+				"random\t(): number Math"
+			],
+			[
+				"DEA",
+				"DEFAULT"
+			],
+			[
+				"O",
+				"Object"
+			],
+			[
+				"PE",
+				"PENDING_PAYMENT"
+			],
+			[
+				"LO",
+				"locationId"
+			],
+			[
+				"dimension",
+				"dimensionId"
+			],
+			[
+				"No",
+				"NOT"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "db.createUser(\n  {\n    user: \"dpms\",\n    pwd: \"dpms\",\n    roles: [ { role: \"readWrite\", db: \"test\" } ]\n  }\n)",
+			"settings":
+			{
+				"buffer_size": 108,
+				"line_ending": "Unix",
+				"name": "db.createUser("
+			}
+		},
+		{
+			"contents": "# Microservices Transport\n[Is REST Best in a Microservices Architecture?](https://capgemini.github.io/architecture/is-rest-best-microservices/)  \n[Dissecting Message Queues](https://bravenewgeek.com/dissecting-message-queues/)  \n[Microservices Architecture](https://www.tutorialspoint.com/microservice_architecture/microservice_architecture_introduction.htm)\n[Microservices Examples](https://github.com/cer/microservices-examples)    \n\n[](https://dev.to/matteojoliveau/microservices-communications-why-you-should-switch-to-message-queues--48ia)  \n[Rabbit Queue Design](https://stackoverflow.com/questions/32220312/rabbitmq-amqp-best-practice-queue-topic-design-in-a-microservice-architecture)  \n\n[](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/)  \n[](https://medium.com/systems-architectures/walking-the-microservices-path-towards-loose-coupling-few-pitfalls-4067bf5e497a)  \n# Mircroservices Pattern\n[](https://medium.com/@odedia/listen-to-yourself-design-pattern-for-event-driven-microservices-16f97e3ed066)\n\n# Machine Learning(ML) and Mircroservices\n[ML Microservices Container ](https://dzone.com/articles/top-trends-machine-learning-microservices-containe) \n[](http://www.parallelm.com/ml-deployed-micro-service/)  ",
+			"file": "microservices.md",
+			"file_size": 1170,
+			"file_write_time": 131746372630000000,
+			"settings":
+			{
+				"buffer_size": 1296,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "kind: Service\napiVersion: v1\nmetadata:\n  name: worker\n  labels:\n    app: worker\nspec:\n  selector:\n    app: worker\n  ports:\n  - protocol: TCP\n    port: 22\n    targetPort: 22\n  type: NodePort \n---\nkind: Service\napiVersion: v1\nmetadata:\n  name: app1\n  labels:\n    app: app1\nspec:\n  selector:\n    app: app1\n  ports:\n  - protocol: TCP\n    port: 22\n    targetPort: 22\n  type: ClusterIP \n---\nkind: Service\napiVersion: v1\nmetadata:\n  name: app2\n  labels:\n    app: app2\nspec:\n  selector:\n    app: app2\n  ports:\n  - protocol: TCP\n    port: 22\n    targetPort: 22\n  type: ClusterIP \n\non worker, then\nssh app1\nssh app2",
+			"settings":
+			{
+				"buffer_size": 605,
+				"line_ending": "Unix",
+				"name": "kind: Service"
+			}
+		},
+		{
+			"file": "kubernetes.sublime-project",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown view",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown",
+				"MarkdownEditing: Switch List Bullet Type"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"prin",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ma",
+				"MarkdownEditing: New Reference"
+			],
+			[
+				"dock",
+				"Set Syntax: Dockerfile"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"yam",
+				"YAML Nav: Copy Symbol To Clipboard"
+			],
+			[
+				"ya",
+				"YAML Nav: Goto Symbol"
+			],
+			[
+				"rm",
+				"Package Control: Remove Package"
+			],
+			[
+				"con",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"instakl",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"snni",
+				"Snippet: Creative Commons Attribution-NoDerivs 4.0"
+			],
+			[
+				"pay",
+				"Snippet: PayPal Badge"
+			],
+			[
+				"rmppl",
+				"Terminal: Open in project folder"
+			],
+			[
+				"readme hel",
+				"MarkdownEditing: Find Next Heading (Same or higher level)"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"pre",
+				"Pretty JSON: Validate"
+			],
+			[
+				"pa",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"INST",
+				"Package Control: Install Package"
+			],
+			[
+				"new f",
+				"File: New File Relative to Current View"
+			],
+			[
+				"rea",
+				"File: Rename"
+			],
+			[
+				"user",
+				"Preferences: Terminal Settings – User"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"ss ngin",
+				"Set Syntax: nginx"
+			],
+			[
+				"ss java",
+				"Set Syntax: Java"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 614.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/frankchen/Documents/kubernetes",
+		"/home/frankchen/Documents/kubernetes/templates"
+	],
+	"file_history":
+	[
+		"/home/frankchen/Documents/microservices-exmaples/tutorial.md",
+		"/media/msa-nas2/MSA Project Information/Web team/dicoogle_web_api.yaml",
+		"/home/frankchen/Documents/kubernetes/microservices.md",
+		"/media/msa-nas2/MSA Project Information/Web team/server.md",
+		"/home/frankchen/Documents/workspace/dicom/dicom-api-server/dicom-api-swagger3.0.yaml",
+		"/home/frankchen/Desktop/Weekly Report/MongoDB.md",
+		"/home/frankchen/Documents/microservices-exmaples/mongo-stack.yaml",
+		"/home/frankchen/Documents/workspace/dicom/mongo-stack.yaml",
+		"/home/frankchen/Documents/workspace/dicom/dicom-api-server/pom.xml",
+		"/home/frankchen/Documents/microservices-exmaples/spring-boot-restful-api/pom.xml",
+		"/home/frankchen/Documents/microservices-exmaples/spring-boot-restful-api/src/main/java/com/example/restfulspringboot/Application.java",
+		"/home/frankchen/Documents/workspace/MavenJava/src/test/java/hello/GreeterTest.java",
+		"/home/frankchen/Documents/workspace/MavenJava/pom.xml",
+		"/home/frankchen/Documents/workspace/MavenJava/src/main/java/hello/Greeter.java",
+		"/home/frankchen/Documents/workspace/MavenJava/src/main/java/hello/HelloWorld.java",
+		"/home/frankchen/Documents/workspace/SpringBoot/pom.xml",
+		"/home/frankchen/Documents/kubernetes/templates/traefic-deployment.yaml",
+		"/home/frankchen/Documents/kubernetes/templates/myapp-pod.yaml",
+		"/home/frankchen/Documents/kubernetes/iptables-rules-installed-by-kube-proxy.out",
+		"/home/frankchen/Documents/kubernetes/config-exercise/config-demo-2",
+		"/home/frankchen/Documents/kubernetes/config-exercise/config-aws",
+		"/home/frankchen/Documents/kubernetes/config-exercise/config-demo",
+		"/home/frankchen/Desktop/summoners_war/summoners_war_optimizer/data/bestiary-debate.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dmetrix-tool/benchmark.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool/benchmark.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/unictech-tool/unictech-tool.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool/motic-tool.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool/3dhistech-tool.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/unictech-tool/n.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/entrypoint.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/README.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-activemq-consumer/build.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-activemq-consumer/Dockerfile",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/build.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/3dhistech-tool.py",
+		"/home/frankchen/Documents/dpms-build/config.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool2/build.sh",
+		"/home/frankchen/Desktop/Weekly Report/Kernetes.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/tuning-nginx.MD",
+		"/home/frankchen/Desktop/Weekly Report/Dicoogle.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/Dockerfile",
+		"/home/frankchen/Documents/dicom/DicoogleDir/confs/server.xml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/api-doc/dpms.swagger.yaml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/api-doc/dpms.openapi3.yaml",
+		"/home/frankchen/Documents/dicom/DicoogleDir/Plugins/settings/file-storage.xml",
+		"/home/frankchen/Documents/dicom/DicoogleDir/Plugins/settings/luceneset.xml",
+		"/home/frankchen/Documents/dicom/dicoogle/pom.xml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/test.MD",
+		"/media/dpms-nas2/frank.test/3dhistech-tool-asyncio.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/3dhistech-tool2-large-tile.py",
+		"/home/frankchen/Documents/pythonws/3dhistech-tool3.py",
+		"/home/frankchen/Documents/pythonws/2b-async-asyncio-batch-file.py",
+		"/home/frankchen/Documents/pythonws/2a-async-asyncio-subprocess-await.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool2/motic-tool.py",
+		"/media/dpms-nas2/frank.test/3dhistech-tool3.py",
+		"/home/frankchen/Documents/pythonws/1-sync-async-execution-asyncio-await.py",
+		"/home/frankchen/Documents/pythonws/1b-cooperatively-scheduled-asyncio-await.py",
+		"/home/frankchen/Documents/pythonws/1c-determinism-sync-async-asyncio-await.py",
+		"/home/frankchen/Documents/pythonws/async-asyncio-subprocess-await.py",
+		"/home/frankchen/Desktop/guarantee.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/directives/cross-domain-insecure.conf",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/nginx.conf",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/conf.d/default.conf",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/directives/cache-file-descriptors.conf",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/patch/acl_patch.conf",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/patch/filterCase.conf",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/api-server/src/main/java/com/astri/dpms/controller/SlideController.java",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/test.md",
+		"/home/frankchen/.config/sublime-text-3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/home/frankchen/Documents/phaser/phaser3-project-template/webpack.config.js",
+		"/home/frankchen/Documents/phaser/phaser3-project-template/src/index.js",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/3dhistech-tool-large-tile.py",
+		"/home/frankchen/Documents/dpms/api-doc/dpms.swagger.3_0.yaml",
+		"/home/frankchen/Documents/wsi/hku-AS773.19.json",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool2/3dhistech-tool2.py",
+		"/home/frankchen/Documents/dpms/dpms-design-docs/backend/doc.md",
+		"/home/frankchen/Documents/dpms/dpms-design-docs/backend/plantuml/archive-flow.plantuml",
+		"/home/frankchen/Documents/dpms/dpms-design-docs/backend/plantuml/dispacth-event.plantuml",
+		"/home/frankchen/Documents/dpms/dpms-design-docs/backend/plantuml/ingest-flow.plantuml",
+		"/home/frankchen/Documents/dpms/dpms-design-docs/backend/plantuml/api-server.plantuml",
+		"/home/frankchen/Documents/dpms/dpms-design-docs/backend/plantuml/create-snapshot.plantuml",
+		"/home/frankchen/Documents/dpms/dpms-design-docs/backend/plantuml/create-analytics.plantuml",
+		"/home/frankchen/Documents/dpms/dpms-design-docs/backend/plantuml/create-analytics.png",
+		"/home/frankchen/Documents/dpms/api-doc/dpms.openapi3.yaml",
+		"/home/frankchen/Documents/dpms/back-end.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/initdb.d/02-schema-event.sql",
+		"/home/frankchen/Documents/dpms/front-end.md",
+		"/home/frankchen/Documents/dpms/DetailedDesignDocs",
+		"/home/frankchen/Documents/dpms/2018-03-22.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-activemq-consumer/READMD.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/db-HA/dpms-stack-failover-db.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/db-HA/dpms-stack-without-replication-db.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/db-HA/replication.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/db-HA/failover.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/db-HA/dpms-stack-replication-db.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/unictech-tool/prebuilt/.gitignore",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/db-HA/dpms-stack-without-failover-db.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms19/dpms-stack.yml",
+		"/home/frankchen/Documents/dpms/dpms-stack-replication.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/DEV.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/docker-stack-replication.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/initdb.d/01-schema-caa.sql",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/Dockerfile",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/init-slave.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/replication-entrypoint.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/initdb.d/00-schema-rdv.sql",
+		"/home/frankchen/Documents/dpms/dpms-stack-without-db.yml",
+		"/home/frankchen/Documents/dpms/dpms-stack.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-mariadb2/docker-stack.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms48/dpms-stack.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool/3dhistech-export.windows/3dhistech-export/SlideAcWrapper.h",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/dpms-stack.yml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/HA-test.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/dpms-stacks/dpms-aws/SETUP.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool/3dhistech-export.windows/3dhistech-export/3dhistech-export.cpp",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/conf.d/rewriteJWT.lua",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool/build.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/docker-webserver/nginx/conf.d/access.lua",
+		"/home/frankchen/Documents/dpms/api-doc/dpms.swagger.yaml",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool/README.md",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool/build.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/3dhistech-tool/3dhistech-tool.old.py",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/unictech-tool/build.sh",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool/motic-export/include/MDSParser.h",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool/motic-export/source/motic-export.cpp",
+		"/home/frankchen/Documents/dpms/api-doc/DPMS_API_v3.0_Swagger_v3.0/dpms.swagger.3_0 .yml",
+		"/home/frankchen/Documents/dpms/api-doc/DPMS_API_v3.0_Swagger_v3.0/doc.html",
+		"/home/frankchen/Documents/dpms-build/workspace/DPMS/motic-tool/motic-export/Makefile"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"auto_name": "db.createUser(",
+							"default_dir": "/home/frankchen/Documents/microservices-exmaples",
+							"is_init_dirty_state": true,
+							"markdonw_live_preview_last_run": 1537338611.08,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "microservices.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1296,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1296,
+								1296
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": true,
+							"markdonw_live_preview_last_run": 1537338611.09,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 605,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								194,
+								194
+							]
+						],
+						"settings":
+						{
+							"auto_name": "kind: Service",
+							"default_dir": "/home/frankchen/Documents/kubernetes/templates",
+							"markdonw_live_preview_last_run": 1537338611.08,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "kubernetes.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"markdonw_live_preview_last_run": 1537338615.72,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 96.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mde":
+	{
+		"height": 96.0
+	},
+	"output.nodejs":
+	{
+		"height": 96.0
+	},
+	"pinned_build_system": "",
+	"project": "kubernetes.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"data/bestiary-debate.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

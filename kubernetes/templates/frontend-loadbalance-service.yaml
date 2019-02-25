@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  selector:
+    app: guestbook
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  #clusterIP: 10.0.171.239
+  #loadBalancerIP: 10.6.65.158
+  type: LoadBalancer
