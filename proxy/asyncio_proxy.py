@@ -1,7 +1,6 @@
 #!/usr/bin/env python3.6
 """
 https://docs.python.org/3.6/library/asyncio-protocol.html#protocols
-https://medium.com/@pgjones/an-asyncio-socket-tutorial-5e6f3308b8b0
 """
 
 import asyncio
@@ -49,30 +48,79 @@ async send_data_to_destination(host, port, data):
 """
 
 async def handle_data_from_client(reader, writer):
+    # parse the http request
     # read client data
     conn = h11.Connection(h11.SERVER)
 
+    request_raw = b''
+    request_header = None
+    request_body = None
+
+    # read the header
     event = None
     while True:
+        data = await reader.read(100) #reader.read(max_size)
+        request_raw += data
+        conn.receive_data(data)
         event = conn.next_event()
-        if event is h11.NEED_DATA:
-            #if conn.they_are_waiting_for_100_continue:
-            #    do_sendall(conn, h11.InformationalResponse(100, ...))
-            data = await reader.readline() #reader.read(max_size)
-            conn.receive_data(data)
-            continue
-        else:
+        if event is h11.Request:
+            print("the request header is {}".format(event))
+            request_header = event
             break
-    
-    if event is h11.Request:
-        response = await send_data_to_destination()
+        if event is h11.NEED_DATA:
+            continue
+        if event is h11.PAUSED:
+            print("server error")
+            break
 
+    # read the body
+    if event is h11.Request:
+        event = conn.next_event()
+        if event is h11.EndOfMessage:
+            print("the request have no body, with event {}".format(event))
+        else if event is h11.NEED_DATA:
+            while True:
+                data = await reader.read(100) #reader.read(max_size)
+                conn.receive_data(data)
+                request_raw += data
+                event = conn.next_event()
+                if event is h11.NEED_DATA:
+                    continue
+                else if event is h11.NEED_DATA:
+                    print("the request body is {}".format(event))
+                    request_body = event
+                    break
+                else:
+                    break
+        else:
+            print("when reading the request body, the unexpected event is {}".format(event))
+
+    # finish the request
+    if event is h11.EndOfMessage:
+        pass
+    else if event is h11.Data:
+        event = conn.next_event()
+        if event is h11.EndOfMessage:
+            print("the request has finished to be parsed, with event {}".format(event))
+        else:
+            print("unexpected event {} when trying to finish parse the request body".format(event))
+    else:
+        print("when finish the request, the unexpected event is {}".format(event))
+
+    # send the response to client
+    response = b''
+    if event is h11.EndOfMessage:
+        # TODO: response = await send_data_to_destination()
+        response = b'received'
+    else:
+        print("when sending the response, the unexpected event is {}".format(event))
+        response = b'server error'
+    
+    print("send to client, {}".format(response))
 
     # write response back to client
     addr = writer.get_extra_info('peername')
-    print("Received %r from %r" % (response.decode(), addr))
-
-    print("Send: %r" % response.decode())
+    print("Send: {} to client {}".format(response, addr))
     writer.write(response)
     await writer.drain()
 
