@@ -49,9 +49,12 @@ When gPRC servers are deployed in cluster such as microservices, `service discov
 
 [gRPC service discovery with Consul](https://developpaper.com/grpc-service-discovery-with-consul/)
 
+[HowTo: Container Orchestration with Nomad and Consul](https://medium.com/@mykidong/howto-container-orchestration-with-nomad-and-consul-f99430abcc85)
 
-
-
+**Service Discovery**:
+- [Consul](https://learn.hashicorp.com/consul/)
+- [etcd]()
+- [Zookeeper]()
 
 
 
