@@ -1,0 +1,156 @@
+plugins {
+    // Provide convenience executables for trying out the examples.
+    id 'application'
+    // ASSUMES GRADLE 2.12 OR HIGHER. Use plugin version 0.7.5 with earlier gradle versions
+    id 'com.google.protobuf' version '0.8.5'
+    // Generate IntelliJ IDEA's .idea & .iml project files
+    id 'idea'
+}
+
+group 'com.astri.grpc'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// IMPORTANT: You probably want the non-SNAPSHOT version of gRPC. Make sure you
+// are looking at a tagged version of the example and not "master"!
+
+// Feel free to delete the comment at the next line. It is just for safely
+// updating the version in our release process.
+def grpcVersion = '1.19.0' // CURRENT_GRPC_VERSION
+def protobufVersion = '3.6.1'
+def protocVersion = protobufVersion
+
+dependencies {
+    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
+    compileOnly "javax.annotation:javax.annotation-api:1.2"
+
+    // examples/advanced need this for JsonFormat
+    implementation "com.google.protobuf:protobuf-java-util:${protobufVersion}"
+
+    runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
+
+    testImplementation "io.grpc:grpc-testing:${grpcVersion}"
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.mockito:mockito-core:1.9.5"
+}
+
+// https://github.com/google/protobuf-gradle-plugin#customizing-protobuf-compilation
+protobuf {
+    // Configure the protoc executable
+    protoc {
+        // Download from repositories
+        artifact = "com.google.protobuf:protoc:${protobufVersion}"
+    }
+    // You may also run protoc with codegen plugins.
+    // Locate the codegen plugins
+    plugins {
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
+        }
+    }
+    generateProtoTasks {
+        // all() returns the collection of all protoc tasks
+        all().each { task ->
+            // Here you can configure the task
+            // builtins: code generators built in protoc, e.g., java, cpp, python.
+            // plugins: code generation plugins that work with protoc, e.g., grpc.
+            // They must be defined in the protobuf.plugins block in order to be added to a task.
+            task.plugins {
+                grpc { }
+            }
+            println task
+        }
+        // Or
+        // all()*.plugins {
+        //     grpc { }
+        // }
+
+        // Or
+        // ofSourceSet('main')*.plugins {
+        //     // Apply the "grpc" plugin whose spec is defined above, without
+        //     // options.  Note the braces cannot be omitted, otherwise the
+        //     // plugin will not be added. This is because of the implicit way
+        //     // NamedDomainObjectContainer binds the methods.
+        //     grpc { }
+        // }
+    }
+}
+
+// Inform IDEs like IntelliJ IDEA, Eclipse or NetBeans about the generated code.
+sourceSets {
+    main {
+        java {
+            srcDirs 'build/generated/source/proto/main/grpc'
+            srcDirs 'build/generated/source/proto/main/java'
+        }
+    }
+}
+
+startScripts.enabled = false
+
+//task routeGuideServer(type: CreateStartScripts) {
+//    mainClassName = 'io.grpc.examples.routeguide.RouteGuideServer'
+//    applicationName = 'route-guide-server'
+//    outputDir = new File(project.buildDir, 'tmp')
+//    classpath = startScripts.classpath
+//}
+//
+//task routeGuideClient(type: CreateStartScripts) {
+//    mainClassName = 'io.grpc.examples.routeguide.RouteGuideClient'
+//    applicationName = 'route-guide-client'
+//    outputDir = new File(project.buildDir, 'tmp')
+//    classpath = startScripts.classpath
+//}
+
+task helloWorldServer(type: CreateStartScripts) {
+    mainClassName = 'com.astri.grpc.examples.helloworld.HelloWorldServer'
+    applicationName = 'hello-world-server'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+task helloWorldClient(type: CreateStartScripts) {
+    mainClassName = 'com.astri.grpc.examples.helloworld.HelloWorldClient'
+    applicationName = 'hello-world-client'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+//task authServer(type: CreateStartScripts) {
+//    mainClassName = 'io.grpc.examples.authentication.AuthServer'
+//    applicationName = 'auth-server'
+//    outputDir = new File(project.buildDir, 'tmp')
+//    classpath = startScripts.classpath
+//}
+//
+//task authClient(type: CreateStartScripts) {
+//    mainClassName = 'io.grpc.examples.authentication.AuthClient'
+//    applicationName = 'auth-client'
+//    outputDir = new File(project.buildDir, 'tmp')
+//    classpath = startScripts.classpath
+//}
+//
+//task compressingHelloWorldClient(type: CreateStartScripts) {
+//    mainClassName = 'io.grpc.examples.experimental.CompressingHelloWorldClient'
+//    applicationName = 'compressing-hello-world-client'
+//    outputDir = new File(project.buildDir, 'tmp')
+//    classpath = startScripts.classpath
+//}
+
+applicationDistribution.into('bin') {
+//    from(routeGuideServer)
+//    from(routeGuideClient)
+    from(helloWorldServer)
+    from(helloWorldClient)
+//    from(authServer)
+//    from(authClient)
+//    from(compressingHelloWorldClient)
+    fileMode = 0755
+}

@@ -26,7 +26,18 @@ Mainstream ORM packages use parameterized SQL, which will protect you from a dir
 # Spring
 [](https://blog.tratif.com/2017/11/23/effective-restful-search-api-in-spring) 
 
-## Spring Data MonngoDB  
+
+
+## Spring Boot
+[Java Configure Tomcat Connector Properties In Spring Boot 2.0](https://stackoverflow.com/questions/47700115/tomcatembeddedservletcontainerfactory-is-missing-in-spring-boot-2)  
+[Enable Mulitple Connectors In Tomcat](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-enable-multiple-connectors-in-tomcat)  
+[Custom Arguments Parser In Controllers](https://sdqali.in/blog/2016/01/29/using-custom-arguments-in-spring-mvc-controllers/)  
+[spring boot code structure](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-structuring-your-code.html)  
+[Spring Nonwebapplication]()  
+
+
+
+## Spring Data MongoDB  
 
 [Spring Data MongoDB : Update document](https://www.mkyong.com/mongodb/spring-data-mongodb-update-document/)  
 In Spring data – MongoDB, you can use following methods to update documents.
@@ -45,11 +56,37 @@ In Spring data – MongoDB, you can use following methods to update documents.
 [](http://www.baeldung.com/queries-in-spring-data-mongodb)  
 [](https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html)  
 
-## Spring Boot
-[Java Configure Tomcat Connector Properties In Spring Boot 2.0](https://stackoverflow.com/questions/47700115/tomcatembeddedservletcontainerfactory-is-missing-in-spring-boot-2)  
-[Enable Mulitple Connectors In Tomcat](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-enable-multiple-connectors-in-tomcat)  
-[Custom Arguments Parser In Controllers](https://sdqali.in/blog/2016/01/29/using-custom-arguments-in-spring-mvc-controllers/)  
-[spring boot code structure](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-structuring-your-code.html)  
+
+## Spring Data JPA
+
+`Spring Data JPA` -> `Hibernate` vs `JDBC template` -> `MySQL driver`
+[What Is the Difference Between Hibernate and Spring Data JPA?](https://dzone.com/articles/what-is-the-difference-between-hibernate-and-sprin-1)
+
+[Differences between spring jdbctemplate and Hibernate](https://stackoverflow.com/questions/17301122/differences-between-spring-jdbctemplate-and-hibernate/17301317)  
+
+[Introduction to Spring Data JPA](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)  
+
+**Database Initialization**
+
+[how the initialization machenism in Spring Data JPA](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html#howto-database-initialization)  
+
+
+
+
+### JPA(Java Persist API)
+- CRUD Operations
+  - Deleting
+  1. Cascade Remove is independent in JPA and database, JPA will remove all the associated entities before delete the aimed entity.
+
+  [Deleting JPA Entity Objects](https://www.objectdb.com/java/jpa/persistence/delete)  
+  [JPA Cascade Types](https://howtodoinjava.com/hibernate/hibernate-jpa-cascade-types/)  
+  [Hibernate CascadeType.REMOVE Example](https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-cascadetype-remove-example/)  
+
+### Examples
+
+[Spring Boot + Spring data JPA](https://www.mkyong.com/spring-boot/spring-boot-spring-data-jpa/)  
+[Spring Boot + Spring data JPA + MySQL](https://www.mkyong.com/spring-boot/spring-boot-spring-data-jpa-mysql-example/)  
+
 
 ## Spring RestTemplate
 [Rest Client Response Exception](https://stackoverflow.com/questions/15404605/spring-resttemplate-invoking-webservice-with-errors-and-analyze-status-code)  

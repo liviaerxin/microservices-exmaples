@@ -1,13 +1,23 @@
 # Build Automation Tools
 
+It's generally to used automation tools to build a single project or a complex project. Here I will dive into the **Gradle** and **Maven**.
+
+For a tough overview on them, seeing refereneces,
+
 [Gradle vs. Maven](https://dzone.com/articles/gradle-vs-maven)  
-[Java Build Tools: Ant vs Maven vs Gradle
-](https://technologyconversations.com/2014/06/18/build-tools/)   
-[Gradle vs Maven Comparison
-](https://gradle.org/maven-vs-gradle/)  
+[Java Build Tools: Ant vs Maven vs Gradle](https://technologyconversations.com/2014/06/18/build-tools/)   
+[Gradle vs Maven Comparison](https://gradle.org/maven-vs-gradle/)  
+
+## Gradle
+
+### Gradle Wrapper
+
+In a good habit, execute any Gradle buld with the [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html), saving time for manual installation and keeping away conflicts(such as Gradle version mismatch) when multiple users get up and run.
 
 
-#### Build Phases
+
+
+### Build Phases
 
 - Initialization
 
@@ -23,10 +33,8 @@
 
     ```
     dependencies {
-
       implementation "ch.qos.logback:logback-classic:1.1.3"  
-      testImplementation group: "org.springframework.boot", name: "spring-boot-starter-test", version:springBootVersion
-
+      testImplementation group: "org.springframework.boot", name: "spring-boot-starter-test", version:2.0
     }
     ```
 
@@ -89,7 +97,14 @@ apply plugin: 'java'
 ```
 This simple line of code adds 20+ tasks waiting for us to use.
 
+### Dependency Management
 
+Here is some extracts when reading the [official documents about dependency management](https://docs.gradle.org/current/userguide/introduction_dependency_management.html)
+
+
+1. dependency type
+  - module dependencies
+  - 
 
 ### Use **DSL(domain-specific language)** based on the programming language **Groovy** to write configuration scripts.
 

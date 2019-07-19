@@ -1,15 +1,23 @@
-# Java 8 Features
+# Java
 
-Perphaps there are some features introduced before JAVA 8.
+## Basic Knowledge
+
+[How to compile and run a simple java code](./HelloJavaScripts.java)
+
+
+
+## Java Features
+
+Perhaps there are some features introduced before JAVA 8.
 
 
 
 
-# Interfaces, Inheritance and Abstract
+### Interfaces, Inheritance and Abstract
 
 [Overview of Inheritance, Interfaces and Abstract Classes in Java](https://medium.com/@isaacjumba/overview-of-inheritance-interfaces-and-abstract-classes-in-java-3fe22404baf8)
 
-## Interfaces
+- **Interfaces**
 
 [Default Methods](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html)
 
@@ -22,7 +30,7 @@ The field defined in an interface is `static final`.
 
 
 
-## Lambda Expression
+- **Lambda Expression**
 
 [How to start working with Lambda Expressions in Java](https://medium.freecodecamp.org/learn-these-4-things-and-working-with-lambda-expressions-b0ab36e0fffc)
 
@@ -44,11 +52,21 @@ What the major point is,
 - Keep Lambda Expressions Short And Self-explanatory
 
 
-
-
-## Anonymous Inner Class
+- **Anonymous Inner Class**
 
 [Anonymous Inner Class in Java](https://www.geeksforgeeks.org/anonymous-inner-class-java/)
 
 
+
+
+
+## PECS(Producer `extends` and Consumer `super`)
+
+[Difference between <? super T> and <? extends T> in Java](https://stackoverflow.com/questions/4343202/difference-between-super-t-and-extends-t-in-java)
+
+
+
+## Good Tutorial
+
+[geeksforgeeks java](https://www.geeksforgeeks.org/java/)
 
