@@ -1,0 +1,6 @@
+task action {
+    doLast {
+        rootProject.producerMessage = "Watch the order of execution."
+        println("Producing message: " + rootProject.producerMessage)
+    }
+}
