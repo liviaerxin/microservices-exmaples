@@ -1,6 +1,11 @@
 # gRPC
 
+
+
 ## Basic Knowledge
+
+[GRPC Server Reflection Protocol](https://github.com/grpc/grpc/blob/master/doc/server-reflection.md)
+
 
 
 ## Protocol-Buffer
@@ -33,11 +38,13 @@ We need to generate the gRPC client and server interfaces from our `.proto` serv
 
 
 
-2. **Creating the client**
+4. **Creating the client**
 
 
 
-## Load Balancing and Service Discovery
+
+
+## Load Balancing
 
 When gPRC servers are deployed in cluster such as microservices, `service discovery` and `load balancing` are entailed when client call server.
 
@@ -47,19 +54,54 @@ When gPRC servers are deployed in cluster such as microservices, `service discov
 
 [gRPC Load Balancing](https://grpc.io/blog/loadbalancing/)
 
-[gRPC service discovery with Consul](https://developpaper.com/grpc-service-discovery-with-consul/)
+[Building scalable microservices with gRPC](https://www.bugsnag.com/blog/grpc-and-microservices-architecture)
 
-[HowTo: Container Orchestration with Nomad and Consul](https://medium.com/@mykidong/howto-container-orchestration-with-nomad-and-consul-f99430abcc85)
+[Pattern: Server-side service discovery](https://microservices.io/patterns/server-side-discovery.html)
 
-**Service Discovery**:
-- [Consul](https://learn.hashicorp.com/consul/)
-- [etcd]()
-- [Zookeeper]()
+[Service Discovery in a Microservices Architecture](https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/)
+
+### Load Balancing Model
+
+1. Proxy Load Balancer options
+   - L3/L4 (Transport)
+   - L7 (Application)
+     - nginx gRPC
+     - traefic gRPC
+2. Client side LB options
+   - Thick client
+    the data center middleware (service discovery service) can be selected as follows:
+     - Consul
+        [Consul by HashiCorp](https://learn.hashicorp.com/consul/)
+
+        [gRPC service discovery with Consul](https://developpaper.com/grpc-service-discovery-with-consul/)
+
+        [HowTo: Container Orchestration with Nomad and Consul](https://medium.com/@mykidong/howto-container-orchestration-with-nomad-and-consul-f99430abcc85)
+
+     - etcd
+
+     - Zookeeper
+   - Lookaside Load Balancing
 
 
+### Solution
+
+1. Load Balancer Choices
+   - Nginx gRPC
+   - traefic gRPC
+2. Service Discovery Middleware
+   - Consul
+    [Consul](https://learn.hashicorp.com/consul/)
+
+    [gRPC service discovery with Consul](https://developpaper.com/grpc-service-discovery-with-consul/)
+
+    [HowTo: Container Orchestration with Nomad and Consul](https://medium.com/@mykidong/howto-container-orchestration-with-nomad-and-consul-f99430abcc85)
+
+   - etcd
+
+   - Zookeeper
 
 
-**Question**:
+### Question
 
 1. Does one client/stub send multiple requests simultaneously on opening multiple connections?
 
@@ -69,12 +111,19 @@ Right also wrong, one stub can send multiple requests but one stub only bind to 
 
 [Client](https://grpclib.readthedocs.io/en/latest/client.html)
 
+2. What I have known so far is that the sevice has full service name of `{package}/{service}` and the method also has full method name of `{package}/{service}/{method}`, which are unique to exist in a gRPC server. And the `*.proto` file does not tell the `server` host address or domain name but contains `{package}`, `{service}` and `{method}`. Therefore, how the gRPC client could discover which host is running the `service` it wishes to call? By now, the host domain name is hard-coded into the client.
 
-1. What I have known so far is that the sevice has full service name of `{package}/{service}` and the method also has full method name of `{package}/{service}/{method}`, which are unique to exist in a gRPC server. And the `*.proto` file does not tell the `server` host address or domain name but contains `{package}`, `{service}` and `{method}`. Therefore, how the gRPC client could discover which host is running the `service` it wishes to call? By now, the host domain name is hard-coded into the client.
+
+3. load-balanced in the transport layer (L3/L4) or application layer (L7)?
 
 
-load-balanced in the transport layer (L3/L4) or application layer (L7)?
 
+
+## Health Check
+
+[GRPC Health Checking Protocol](https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
+
+[Health checking gRPC servers on Kubernetes](https://kubernetes.io/blog/2018/10/01/health-checking-grpc-servers-on-kubernetes/)
 
 ## HTTP/2
 
