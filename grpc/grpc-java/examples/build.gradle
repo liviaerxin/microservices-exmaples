@@ -29,6 +29,12 @@ def protocVersion = protobufVersion
 dependencies {
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
     implementation "io.grpc:grpc-stub:${grpcVersion}"
+    implementation "io.grpc:grpc-services:${grpcVersion}"
+    implementation "com.ecwid.consul:consul-api:1.4.2"
+    implementation "org.slf4j:slf4j-log4j12:1.6.6"
+    //implementation "log4j:log4j:1.2.17"
+
+
     compileOnly "javax.annotation:javax.annotation-api:1.2"
 
     // examples/advanced need this for JsonFormat
@@ -123,6 +129,20 @@ task helloWorldClient(type: CreateStartScripts) {
     classpath = startScripts.classpath
 }
 
+task HelloWorldServerWithRegister(type: CreateStartScripts) {
+    mainClassName = 'com.astri.grpc.examples.helloworld.HelloWorldServerWithRegister'
+    applicationName = 'hello-world-server-with'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+task HelloWorldClientWithNameResolver(type: CreateStartScripts) {
+    mainClassName = 'com.astri.grpc.examples.helloworld.HelloWorldClientWithNameResolver'
+    applicationName = 'hello-world-client-with'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
 //task authServer(type: CreateStartScripts) {
 //    mainClassName = 'io.grpc.examples.authentication.AuthServer'
 //    applicationName = 'auth-server'
@@ -152,5 +172,7 @@ applicationDistribution.into('bin') {
 //    from(authServer)
 //    from(authClient)
 //    from(compressingHelloWorldClient)
+    from(HelloWorldServerWithRegister)
+    from(HelloWorldClientWithNameResolver)
     fileMode = 0755
 }

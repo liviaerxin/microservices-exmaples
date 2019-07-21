@@ -3,6 +3,9 @@ package com.astri.grpc.examples.helloworld;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
+import io.grpc.health.v1.HealthCheckRequest;
+import io.grpc.health.v1.HealthCheckResponse;
+import io.grpc.health.v1.HealthGrpc;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -17,6 +20,9 @@ public class HelloWorldClient {
     private final ManagedChannel channel;
     private final GreeterGrpc.GreeterBlockingStub blockingStub;
 
+    private HealthGrpc.HealthStub checkStub;
+    private HealthGrpc.HealthBlockingStub checkBlockingStub;
+
     /** Construct client connecting to HelloWorld server at {@code host:port}. */
     public HelloWorldClient(String host, int port) {
         this(ManagedChannelBuilder.forAddress(host, port)
@@ -30,6 +36,10 @@ public class HelloWorldClient {
     HelloWorldClient(ManagedChannel channel) {
         this.channel = channel;
         blockingStub = GreeterGrpc.newBlockingStub(channel);
+
+        // health check
+        checkStub = HealthGrpc.newStub(channel);
+        checkBlockingStub = HealthGrpc.newBlockingStub(channel);
     }
 
     public void shutdown() throws InterruptedException {
@@ -50,6 +60,21 @@ public class HelloWorldClient {
         logger.info("Greeting: " + response.getMessage());
     }
 
+    /** Health check **/
+    public void check(){
+        String service = GreeterGrpc.SERVICE_NAME;
+        logger.info("Will try to check service " + service + " ...");
+        HealthCheckRequest request = HealthCheckRequest.newBuilder().setService(service).build();
+        HealthCheckResponse response;
+        try {
+            response = checkBlockingStub.check(request);
+        } catch (StatusRuntimeException e) {
+            logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
+            return;
+        }
+        logger.info("service status: " + response.getStatus());
+    }
+
     /**
      * Greet server. If provided, the first element of {@code args} is the name to use in the
      * greeting.
@@ -62,6 +87,7 @@ public class HelloWorldClient {
             if (args.length > 0) {
                 user = args[0]; /* Use the arg as the name to greet if provided */
             }
+            client.check();
             client.greet(user);
         } finally {
             client.shutdown();

@@ -107,3 +107,9 @@ Temporary Items
 .apdisk
 
 .setting
+.idea/*.iml
+.idea/*.xml
+.idea/modules
+*.iml
+*.ipr
+.classpath
