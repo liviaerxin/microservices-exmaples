@@ -1,6 +1,6 @@
 # Consul
 
-Start a single-node server for testing purposes like so:
+1. Start a single-node server for testing purposes like so:
 
 ```sh
 docker run --rm --name consul -p 8500:8500 consul agent -server -bootstrap -ui -client=0.0.0.0 -bind=0.0.0.0
@@ -9,7 +9,7 @@ docker run --rm --name consul -p 8500:8500 consul agent -dev -ui -client=0.0.0.0
 ```
 
 
-Register service
+2. Register service
 
 ```sh
 
@@ -38,6 +38,14 @@ _EOF_
 curl -v -XPUT -d "$MSG" http://127.0.0.1:8500/v1/agent/service/register
 ```
 
-TODO: Delete service
+3.Delete service(TODO)
+
+## Deploy Consul Cluster
 
 [Health Checks](https://www.consul.io/docs/agent/checks.html)
+
+[Service registry bridge for Docker](https://github.com/gliderlabs/registrator)
+
+## Application using Consul
+
+[Consul Service Registration and Discovery Example](https://howtodoinjava.com/spring-cloud/consul-service-registration-discovery/)

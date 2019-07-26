@@ -30,8 +30,14 @@
 
 
 - **Partition**
+  - MBR
+  - GPT
+
+[Partitioning](https://wiki.archlinux.org/index.php/Partitioning)
 
 [How to Create Disk Partitions in Linux](https://tecadmin.net/how-to-create-and-format-disk-partitions-in-linux/)
+
+[How can I change/convert a Ubuntu MBR drive to a GPT, and make Ubuntu boot from EFI?](https://askubuntu.com/questions/84501/how-can-i-change-convert-a-ubuntu-mbr-drive-to-a-gpt-and-make-ubuntu-boot-from)
 
 
 - **Grub**
@@ -161,6 +167,8 @@ $ find /lib/modules/$(uname -r) -type f -name '*.ko'
 [Difference between KVM and QEMU](https://serverfault.com/questions/208693/difference-between-kvm-and-qemu#)
 
 [How To Use QEMU To Test Operating Systems & Distributions](https://fosspost.org/tutorials/use-qemu-test-operating-systems-distributions)
+
+
 
 ### Ubuntu
 

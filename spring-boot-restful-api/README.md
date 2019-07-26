@@ -1,22 +1,26 @@
 # REST API
 
 ## REST API Design Best Practices  
+
 [Understanding REST HTTP Methods](https://spring.io/understanding/REST)  
 [](https://blog.philipphauer.de/restful-api-design-best-practices/)   
 [](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)  
 
 
 ## Resource Naming
+
 [REST Resource Naming Guide](https://restfulapi.net/resource-naming/)  
 
 
-## HTTP Method  
-[Put vs Post? Which is used when CreateOrUpdate, Create and Update ](https://stackoverflow.com/questions/630453/put-vs-post-in-rest)  
+## HTTP Method
+
+[Put vs Post? Which is used when CreateOrUpdate, Create and Update](https://stackoverflow.com/questions/630453/put-vs-post-in-rest)  
 
 
 
 
-## Security  
+## Security
+
 Mainstream ORM packages use parameterized SQL, which will protect you from a direct SQL injection attack.
 
 
@@ -24,11 +28,13 @@ Mainstream ORM packages use parameterized SQL, which will protect you from a dir
 
 
 # Spring
+
 [](https://blog.tratif.com/2017/11/23/effective-restful-search-api-in-spring) 
 
 
 
 ## Spring Boot
+
 [Java Configure Tomcat Connector Properties In Spring Boot 2.0](https://stackoverflow.com/questions/47700115/tomcatembeddedservletcontainerfactory-is-missing-in-spring-boot-2)  
 [Enable Mulitple Connectors In Tomcat](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-enable-multiple-connectors-in-tomcat)  
 [Custom Arguments Parser In Controllers](https://sdqali.in/blog/2016/01/29/using-custom-arguments-in-spring-mvc-controllers/)  
@@ -74,6 +80,7 @@ In Spring data – MongoDB, you can use following methods to update documents.
 
 
 ### JPA(Java Persist API)
+
 - CRUD Operations
   - Deleting
   1. Cascade Remove is independent in JPA and database, JPA will remove all the associated entities before delete the aimed entity.
@@ -89,7 +96,33 @@ In Spring data – MongoDB, you can use following methods to update documents.
 
 
 ## Spring RestTemplate
+
 [Rest Client Response Exception](https://stackoverflow.com/questions/15404605/spring-resttemplate-invoking-webservice-with-errors-and-analyze-status-code)  
 
 ## Spring Event
-[Spring Event Listener](https://mydevgeek.com/spring-4-3-event-listener/)  
+
+[Spring Event Listener](https://mydevgeek.com/spring-4-3-event-listener/)
+
+
+
+
+
+# Automated Test
+
+
+[Performing Integration Tests on REST Services](https://dzone.com/articles/performing-integration-tests-on-rest-services-usin)
+
+[REST Assured](https://github.com/rest-assured/rest-assured)
+
+[Spring Boot 2 CRUD REST APIs Integration Testing](https://www.javaguides.net/2018/09/spring-boot-2-rest-apis-integration-testing.html)
+
+[Spring REST Integration Test Example](https://www.mkyong.com/spring-boot/spring-rest-integration-test-example/)
+
+## Unit Test
+
+## Functional Test
+
+## Integration Test
+
+
+# Tiny Server in Java
