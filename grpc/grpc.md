@@ -43,6 +43,13 @@ We need to generate the gRPC client and server interfaces from our `.proto` serv
 
 
 
+## Error Handling
+
+[Error Handling](https://www.grpc.io/docs/guides/error/)
+
+[gRPC errors](http://avi.im/grpc-errors/#python)
+
+[Status codes and their use in gRPC](https://github.com/grpc/grpc/blob/master/doc/statuscodes.md)
 
 
 ## Load Balancing

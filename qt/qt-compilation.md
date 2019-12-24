@@ -1,4 +1,4 @@
-# Qt
+# Qt Compilation
 
 ## Changelog
 - [20190625] re-cross compile qt-5.12.3 source libs and test a Qt application in `Raspberry Pi 3`[more](#Compile-Qt-program-for-Raspberry-Pi-on-Linux-hostadvanced-example).

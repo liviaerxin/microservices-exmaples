@@ -107,7 +107,7 @@ In Spring data – MongoDB, you can use following methods to update documents.
 
 
 
-# Automated Test
+## Automated Test
 
 
 [Performing Integration Tests on REST Services](https://dzone.com/articles/performing-integration-tests-on-rest-services-usin)
@@ -118,11 +118,35 @@ In Spring data – MongoDB, you can use following methods to update documents.
 
 [Spring REST Integration Test Example](https://www.mkyong.com/spring-boot/spring-rest-integration-test-example/)
 
-## Unit Test
+[Top 10 Testing Frameworks and Libraries for Java Developers](https://dzone.com/articles/10-essential-testing-tools-for-java-developers)
 
-## Functional Test
+## Test Definition
 
-## Integration Test
+1. Unit Test
 
+- Junit
+
+2. Integration Test
+
+- [REST Assured](https://github.com/rest-assured/rest-assured)
+
+## Mock
+
+[What is the difference between a stub, a mock and a virtual service?](https://www.linkedin.com/pulse/what-difference-between-stub-mock-virtual-service-wojciech-bulaty/)
+
+- Mockito
+Mockito provides the mock implementation of the method/object.
+[Spring Boot: Unit Testing and Mocking With Mockito and JUnit](https://dzone.com/articles/spring-boot-unit-testing-and-mocking-with-mockito)
+
+
+
+- Wiremock
+Wiremock provides a simulator for HTTP-based APIs.
+
+[WireMock Tutorial](https://www.petrikainulainen.net/wiremock-tutorial/)
+
+## Practice
+
+[Automatic tests for webservice with RestAssured, WireMock and Testcontainers libraries.](https://blog.sysco.no/automatic/tests/web-service-testing/)
 
 # Tiny Server in Java

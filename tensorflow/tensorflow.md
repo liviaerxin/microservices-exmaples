@@ -37,12 +37,54 @@ Write custom building blocks to express new ideas for research. Create new layer
 
 ![TensorRT Optimize Neural Network Model](./trt-info.png "TensorRT Optimize Neural Network Model")
 
-- **Inference Server**
+### TensorRT Inference Server
 
 [NVIDIA TensorRT Inference Server](https://docs.nvidia.com/deeplearning/sdk/tensorrt-inference-server-guide/docs/index.html)
 
 [NVIDIA TensorRT Inference Server Boosts Deep Learning Inference](https://devblogs.nvidia.com/nvidia-serves-deep-learning-inference/)
 
-- **Inference Client**
+
+the `model repository` lives in a directory on the file system.
+
+```
+/tmp/models             --- directory for model repository
+   mymodel/             --- subdirectory for each model
+      config.pbtxt      --- configuration file 
+      3/                --- subdirectory holding a version of the model
+         model.plan      
+```
+
+### TensorRT Inference Client
+
+
+
+
 
 ## TensorFlow Lite
+
+
+
+## Basic Methods
+
+- List host gpu
+
+```sh
+$ nvidia-smi
+```
+
+- List devices
+
+```python
+from tensorflow.python.client import device_lib
+
+#local_device_protos = device_lib.list_local_devices()
+
+def get_available_cpus():
+    local_device_protos = device_lib.list_local_devices()
+    return [x.name for x in local_device_protos if x.device_type == 'CPU']
+
+def get_available_gpus():
+    local_device_protos = device_lib.list_local_devices()
+    return [x.name for x in local_device_protos if x.device_type == 'GPU']
+```
+
