@@ -62,6 +62,9 @@ the `model repository` lives in a directory on the file system.
 
 ## TensorFlow Lite
 
+[TensorFlow Lite guide](https://www.tensorflow.org/lite/guide)
+
+[Hosted models](https://www.tensorflow.org/lite/guide/hosted_models)
 
 
 ## Basic Methods
